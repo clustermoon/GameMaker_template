@@ -36,8 +36,8 @@ function Init_globals(){
 		global.CameraMain = view_camera[0];
 		global.CameraWidth = display_get_width()/2;
 		global.CameraHeight =display_get_height()/2;
-		global.CameraZoom_base = 960/global.CameraWidth; global.CameraZoom = global.CameraZoom_base;
-		global.CameraShake_base = 0; global.CameraShake = global.CameraShake_base;	
+		global.CameraZoom = 960/global.CameraWidth; 
+		global.CameraShake = 0; 
 	#endregion
 
 	#region | Game Control
