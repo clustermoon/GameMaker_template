@@ -24,12 +24,12 @@
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"compositeImage":{"FrameId":{"name":"e04897bd-b0d4-4133-b60d-e6a704f55819","path":"sprites/bgSplashscreen_tile/bgSplashscreen_tile.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
-        {"FrameId":{"name":"e04897bd-b0d4-4133-b60d-e6a704f55819","path":"sprites/bgSplashscreen_tile/bgSplashscreen_tile.yy",},"LayerId":{"name":"6af2dc1f-8cdc-41f9-965f-81f68e6d378f","path":"sprites/bgSplashscreen_tile/bgSplashscreen_tile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
-      ],"parent":{"name":"bgSplashscreen_tile","path":"sprites/bgSplashscreen_tile/bgSplashscreen_tile.yy",},"resourceVersion":"1.0","name":"e04897bd-b0d4-4133-b60d-e6a704f55819","tags":[],"resourceType":"GMSpriteFrame",},
+    {"compositeImage":{"FrameId":{"name":"986f339d-c990-4cb0-a18d-5064f5f27db8","path":"sprites/bgSplashScreen_tile/bgSplashScreen_tile.yy",},"LayerId":null,"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},"images":[
+        {"FrameId":{"name":"986f339d-c990-4cb0-a18d-5064f5f27db8","path":"sprites/bgSplashScreen_tile/bgSplashScreen_tile.yy",},"LayerId":{"name":"5b49eea8-591c-413f-8964-be65073de111","path":"sprites/bgSplashScreen_tile/bgSplashScreen_tile.yy",},"resourceVersion":"1.0","name":"","tags":[],"resourceType":"GMSpriteBitmap",},
+      ],"parent":{"name":"bgSplashScreen_tile","path":"sprites/bgSplashScreen_tile/bgSplashScreen_tile.yy",},"resourceVersion":"1.0","name":"986f339d-c990-4cb0-a18d-5064f5f27db8","tags":[],"resourceType":"GMSpriteFrame",},
   ],
   "sequence": {
-    "spriteId": {"name":"bgSplashscreen_tile","path":"sprites/bgSplashscreen_tile/bgSplashscreen_tile.yy",},
+    "spriteId": {"name":"bgSplashScreen_tile","path":"sprites/bgSplashScreen_tile/bgSplashScreen_tile.yy",},
     "timeUnits": 1,
     "playback": 1,
     "playbackSpeed": 30.0,
@@ -41,7 +41,7 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"b477f486-532e-4240-b4e1-6f4607bad688","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"e04897bd-b0d4-4133-b60d-e6a704f55819","path":"sprites/bgSplashscreen_tile/bgSplashscreen_tile.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"9aab3fef-105b-4106-8993-f05a49b9771c","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"986f339d-c990-4cb0-a18d-5064f5f27db8","path":"sprites/bgSplashScreen_tile/bgSplashScreen_tile.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"resourceVersion":"1.0","tags":[],"resourceType":"GMSpriteFramesTrack","modifiers":[],},
     ],
     "visibleRange": null,
@@ -58,22 +58,22 @@
     "yorigin": 0,
     "eventToFunction": {},
     "eventStubScript": null,
-    "parent": {"name":"bgSplashscreen_tile","path":"sprites/bgSplashscreen_tile/bgSplashscreen_tile.yy",},
+    "parent": {"name":"bgSplashScreen_tile","path":"sprites/bgSplashScreen_tile/bgSplashScreen_tile.yy",},
     "resourceVersion": "1.4",
-    "name": "bgSplashscreen_tile",
+    "name": "bgSplashScreen_tile",
     "tags": [],
     "resourceType": "GMSequence",
   },
   "layers": [
-    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"6af2dc1f-8cdc-41f9-965f-81f68e6d378f","tags":[],"resourceType":"GMImageLayer",},
+    {"visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default","resourceVersion":"1.0","name":"5b49eea8-591c-413f-8964-be65073de111","tags":[],"resourceType":"GMImageLayer",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Backgrounds",
-    "path": "folders/Backgrounds.yy",
+    "name": "SplashScreen",
+    "path": "folders/Sprites/SplashScreen.yy",
   },
   "resourceVersion": "1.0",
-  "name": "bgSplashscreen_tile",
+  "name": "bgSplashScreen_tile",
   "tags": [],
   "resourceType": "GMSprite",
 }

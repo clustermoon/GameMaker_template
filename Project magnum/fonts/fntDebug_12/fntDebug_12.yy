@@ -192,8 +192,8 @@
   "canGenerateBitmap": true,
   "maintainGms1Font": false,
   "parent": {
-    "name": "Fonts",
-    "path": "folders/Fonts.yy",
+    "name": "Debug",
+    "path": "folders/Fonts/Debug.yy",
   },
   "resourceVersion": "1.0",
   "name": "fntDebug_12",

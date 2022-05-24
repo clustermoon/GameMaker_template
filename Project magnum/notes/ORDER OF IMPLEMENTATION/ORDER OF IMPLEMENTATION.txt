@@ -1,0 +1,24 @@
+Step 3: Camera Manager
+re import the camera re do all the steps and make it work this time
+fuck me 
+
+
+Step 4: Network Manager
+	We need to implement the basics of networking initally
+	so all aspects of the project are integrated before
+	additional complexity is added.
+	
+Step 5: Camera Manager
+	We need a camera that can stay persistent while not
+	loosing its set zoom, focus, position, or target. A Dynamic
+	Camera that has the ability to shake, zoom, pan, and 
+	smoothly follow. A camera that allows for pixel perfect
+	rotations with smooth transitions is the goal.
+	
+Step 6: Menu Manager
+	We need a robust menu manager that is easiy to add,
+	and change according to the project needs. Being able to
+	draw individual menus with both controller and mouse
+	input.
+	
+
