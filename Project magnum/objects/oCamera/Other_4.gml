@@ -18,8 +18,8 @@
 	view_visible[global.CameraMain] = true;
 	view_xport[global.CameraMain] = 0;
 	view_yport[global.CameraMain] = 0;
-	view_wport[global.CameraMain] = global.CameraWidth;
-	view_hport[global.CameraMain] = global.CameraHeight;
+	view_wport[global.CameraMain] = global.CameraWidth + 1;
+	view_hport[global.CameraMain] = global.CameraHeight + 1;
 	
 	//Initilize camera
 	var x_border = 400;

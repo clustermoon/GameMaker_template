@@ -29,6 +29,7 @@
     {"id":{"name":"oManager_system","path":"objects/oManager_system/oManager_system.yy",},"order":3,},
     {"id":{"name":"sMask_blue","path":"sprites/sMask_blue/sMask_blue.yy",},"order":0,},
     {"id":{"name":"Init_globals","path":"scripts/Init_globals/Init_globals.yy",},"order":2,},
+    {"id":{"name":"orot","path":"objects/orot/orot.yy",},"order":5,},
     {"id":{"name":"fntDebug_24","path":"fonts/fntDebug_24/fntDebug_24.yy",},"order":1,},
     {"id":{"name":"fntDebug_36","path":"fonts/fntDebug_36/fntDebug_36.yy",},"order":2,},
   ],
