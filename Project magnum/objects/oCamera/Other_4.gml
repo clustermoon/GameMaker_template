@@ -3,23 +3,23 @@
 #region | Camera vars
 
 	//Initilize view
-	globalvar View_Width, View_Height, View, View_Target;
-	View = view_camera[0];
-	View_Width = display_get_width()/2;//960;
-	View_Height = display_get_height()/2;//540;
+
+	global.CameraMain = view_camera[0];
+	global.CameraWidth = display_get_width()/2;//960;
+	global.CameraHeight = display_get_height()/2;//540;
 	View_Target = oTest;
 		
 	//Camera additions
-	globalvar ZoomF, ShakeMag;
-	ZoomF = 960/View_Width;
-	ShakeMag = 0;
+
+	global.CameraZoom = 960/global.CameraWidth;
+	global.CameraShake = 0;
 	
 	view_enabled = true;
-	view_visible[View] = true;
-	view_xport[View] = 0;
-	view_yport[View] = 0;
-	view_wport[View] = View_Width;
-	view_hport[View] = View_Height;
+	view_visible[global.CameraMain] = true;
+	view_xport[global.CameraMain] = 0;
+	view_yport[global.CameraMain] = 0;
+	view_wport[global.CameraMain] = global.CameraWidth;
+	view_hport[global.CameraMain] = global.CameraHeight;
 	
 	//Initilize camera
 	var x_border = 400;
@@ -30,10 +30,10 @@
 	//Initilize display
 	var _dwidth = display_get_width();
 	var _dheight = display_get_height();
-	var _xpos = (_dwidth/2) - View_Width/2;
-	var _ypos = (_dheight/2) - View_Height/2;
-	window_set_rectangle(_xpos, _ypos, View_Width, View_Height);
-	surface_resize(application_surface, View_Width, View_Height);
+	var _xpos = (_dwidth/2) - global.CameraWidth/2;
+	var _ypos = (_dheight/2) - global.CameraHeight/2;
+	window_set_rectangle(_xpos, _ypos, global.CameraWidth, global.CameraHeight);
+	surface_resize(application_surface, global.CameraWidth, global.CameraHeight);
 	
 #endregion
 //---------

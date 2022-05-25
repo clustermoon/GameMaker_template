@@ -1,29 +1,28 @@
 /// @description Update Camera
 #region | Update camera
+		var _p = View_Target;
+		var _InputH = input_check_axis(eInputState.lStick_hAxis);
+		var _InputV = input_check_axis(eInputState.lStick_vAxis);
+		
+		var _viewX = camera_get_view_x(global.CameraMain);
+		var _viewY = camera_get_view_y(global.CameraMain);
+		var _viewW = camera_get_view_width(global.CameraMain);
+		var _viewH = camera_get_view_height(global.CameraMain);
 
-
-	var _p = View_Target;
-
-	
-	
-	if(instance_exists(_p)){
-		var _viewX = camera_get_view_x(View);
-		var _viewY = camera_get_view_y(View);
-		var _viewW = camera_get_view_width(View);
-		var _viewH = camera_get_view_height(View);
-
-		var _hAdjustment = 100;
-		var _vAdjustment = 100;
-		var _gotoX = _p.x - (_viewW * 0.5);
-		var _gotoY = _p.y - (_viewH*0.5);
+		var _hAdjustment = 50;
+		var _vAdjustment = 50;
+		if(instance_exists(_p)){
+			gotoX = _p.x + (_InputH * _hAdjustment) - (_viewW * 0.5);
+			gotoY = _p.y + (_InputV * _vAdjustment) - (_viewH*0.5);
+		}
 
 		var _panSpeed = 0.25;
-		var _newX = lerp(_viewX, _gotoX, _panSpeed);
-		var _newY = lerp(_viewY, _gotoY, _panSpeed);
+		var _newX = lerp(_viewX, gotoX, _panSpeed);
+		var _newY = lerp(_viewY, gotoY, _panSpeed);
 	
 		var _factor = 0.2;	
-		var _lerpH = lerp(_viewH, ZoomF * View_Height, _factor);
-		var _newH = clamp(_lerpH, 0, room_height);var _newW = _newH * (View_Width / View_Height);
+		var _lerpH = lerp(_viewH, global.CameraZoom * global.CameraHeight, _factor);
+		var _newH = clamp(_lerpH, 0, room_height);var _newW = _newH * (global.CameraWidth / global.CameraHeight);
 	
 		var _offsetX = _newX - (_newW - _viewW) * 0.5;
 		var _offsetY = _newY - (_newH - _viewH) * 0.5;
@@ -31,16 +30,16 @@
 		_newY = clamp(_offsetY, 0, room_height - _newH);
 	
 		
-		if(ShakeMag > 0.1){
-			ShakeMag -= ShakeMag/5;	
-		}else{ ShakeMag = 0; }
+		if(global.CameraShake > 0.1){
+			global.CameraShake -= global.CameraShake/5;	
+		}else{ global.CameraShake = 0; }
 
-		camera_set_view_angle(View, -ShakeMag + random(ShakeMag * 2));
-		camera_set_view_size(View, _newW, _newH);
-		camera_set_view_pos(View, _newX, _newY);
-		//surface_resize(application_surface, View_Width, View_Height);
+		camera_set_view_angle(global.CameraMain, -global.CameraShake + random(global.CameraShake * 2));
+		camera_set_view_size(global.CameraMain, _newW, _newH);
+		camera_set_view_pos(global.CameraMain, _newX, _newY);
+		//surface_resize(application_surface, global.CameraWidth, global.CameraHeight);
 	
-	}
+	
 	
 #endregion
 //----------------------------------------------------------------------------------
