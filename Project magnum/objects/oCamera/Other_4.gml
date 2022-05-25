@@ -5,8 +5,8 @@
 	//Initilize view
 
 	global.CameraMain = view_camera[0];
-	global.CameraWidth = display_get_width()/2;//960;
-	global.CameraHeight = display_get_height()/2;//540;
+	global.CameraWidth = display_get_width()/8;//960;
+	global.CameraHeight = display_get_height()/8;//540;
 	View_Target = oTest;
 		
 	//Camera additions
@@ -32,8 +32,9 @@
 	var _dheight = display_get_height();
 	var _xpos = (_dwidth/2) - global.CameraWidth/2;
 	var _ypos = (_dheight/2) - global.CameraHeight/2;
-	window_set_rectangle(_xpos, _ypos, global.CameraWidth, global.CameraHeight);
+	//window_set_rectangle(_xpos, _ypos, global.CameraWidth, global.CameraHeight);
 	surface_resize(application_surface, global.CameraWidth, global.CameraHeight);
+	display_set_gui_size(global.CameraWidth, global.CameraHeight);
 	
 #endregion
 //---------
