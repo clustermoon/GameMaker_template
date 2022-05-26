@@ -27,9 +27,13 @@ function Init_globals(){
 			lBumper,
 			lTrigger,
 			start,
-			select
+			select,
+			padl,
+			padr,
+			padu,
+			padd
 		};
-		global.Input = array_create(14);
+		global.Input = array_create(18);
 	#endregion
 
 	#region | Camera

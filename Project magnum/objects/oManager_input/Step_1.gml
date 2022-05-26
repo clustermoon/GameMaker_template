@@ -42,6 +42,11 @@ if(!global.Freeze){
 			global.Input[eInputState.start]				= vk_escape;
 			global.Input[eInputState.select]				= ord("E");
 			
+			global.Input[eInputState.padl]				= ord("A");
+			global.Input[eInputState.padr]				= ord("D");
+			global.Input[eInputState.padu]				= ord("W");
+			global.Input[eInputState.padd]				= ord("S");
+			
 		break;
 		case eInputDevice.controller:
 		
@@ -61,6 +66,11 @@ if(!global.Freeze){
 			global.Input[eInputState.lTrigger]			= gp_shoulderl;
 			global.Input[eInputState.start]				= gp_start;
 			global.Input[eInputState.select]				= gp_select;
+			
+			global.Input[eInputState.padl]				= gp_padl;
+			global.Input[eInputState.padr]				= gp_padr;
+			global.Input[eInputState.padu]				= gp_padu;
+			global.Input[eInputState.padd]				= gp_padd;
 			
 		break;
 	}
