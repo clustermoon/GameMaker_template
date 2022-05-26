@@ -4,10 +4,10 @@
 		var _InputH = input_check_axis(eInputState.lStick_hAxis);
 		var _InputV = input_check_axis(eInputState.lStick_vAxis);
 		
-		var _viewX = camera_get_view_x(global.CameraMain);
-		var _viewY = camera_get_view_y(global.CameraMain);
-		var _viewW = camera_get_view_width(global.CameraMain);
-		var _viewH = camera_get_view_height(global.CameraMain);
+		var _viewX = camera_get_view_x(global.Camera);
+		var _viewY = camera_get_view_y(global.Camera);
+		var _viewW = camera_get_view_width(global.Camera);
+		var _viewH = camera_get_view_height(global.Camera);
 
 		var _hAdjustment = 50;
 		var _vAdjustment = 50;
@@ -34,9 +34,9 @@
 			global.CameraShake -= global.CameraShake/5;	
 		}else{ global.CameraShake = 0; }
 
-		camera_set_view_angle(global.CameraMain, -global.CameraShake + random(global.CameraShake * 2));
-		camera_set_view_size(global.CameraMain, _newW, _newH);
-		camera_set_view_pos(global.CameraMain, floor(_newX), floor(_newY));
+		camera_set_view_angle(global.Camera, -global.CameraShake + random(global.CameraShake * 2));
+		camera_set_view_size(global.Camera, _newW, _newH);
+		camera_set_view_pos(global.Camera, floor(_newX), floor(_newY));
 		//surface_resize(application_surface, global.CameraWidth, global.CameraHeight);
 	
 		if (!surface_exists(view_surf)) {

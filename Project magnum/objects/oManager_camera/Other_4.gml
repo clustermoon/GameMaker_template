@@ -4,9 +4,9 @@
 
 	//Initilize view
 
-	global.CameraMain = view_camera[0];
-	global.CameraWidth = display_get_width()/8;//960;
-	global.CameraHeight = display_get_height()/8;//540;
+	global.Camera = view_camera[0];
+	global.CameraWidth = display_get_width()/8;
+	global.CameraHeight = display_get_height()/8;
 	View_Target = oTest;
 		
 	//Camera additions
@@ -15,11 +15,11 @@
 	global.CameraShake = 0;
 	
 	view_enabled = true;
-	view_visible[global.CameraMain] = true;
-	view_xport[global.CameraMain] = 0;
-	view_yport[global.CameraMain] = 0;
-	view_wport[global.CameraMain] = global.CameraWidth + 1;
-	view_hport[global.CameraMain] = global.CameraHeight + 1;
+	view_visible[global.Camera] = true;
+	view_xport[global.Camera] = 0;
+	view_yport[global.Camera] = 0;
+	view_wport[global.Camera] = global.CameraWidth + 1;
+	view_hport[global.Camera] = global.CameraHeight + 1;
 	
 	//Initilize camera
 	var x_border = 400;

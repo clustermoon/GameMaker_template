@@ -1,6 +1,6 @@
 {
   "spriteId": null,
-  "solid": true,
+  "solid": false,
   "visible": true,
   "spriteMaskId": null,
   "persistent": true,
@@ -29,11 +29,11 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Managers",
+    "path": "folders/Objects/Game Controllers/Managers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oCamera",
+  "name": "oManager_camera",
   "tags": [],
   "resourceType": "GMObject",
 }
