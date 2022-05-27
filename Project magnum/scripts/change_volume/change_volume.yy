@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Menu/actions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "exit_game",
+  "name": "change_volume",
   "tags": [],
   "resourceType": "GMScript",
 }

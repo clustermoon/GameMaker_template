@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Menu/actions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "exit_game",
+  "name": "choose_load_option",
   "tags": [],
   "resourceType": "GMScript",
 }

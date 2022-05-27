@@ -77,6 +77,8 @@ if(!global.Freeze){
 	#endregion
 }
 
-
+if(input_check_pressed(eInputState.start)){
+	global.Pause = !global.Pause;	
+}
 
 
