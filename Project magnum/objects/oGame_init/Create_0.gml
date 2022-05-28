@@ -9,7 +9,11 @@ window_set_size(width, height);
 angle = 0;
 
 //Spawn Managers
-manager_list = [oManager_system, oManager_input, oManager_network, oManager_menu, oManager_sound];
+
+
+manager_list = [oManager_system, oManager_input, oManager_menu, oManager_sound];
+
+
 for(var i = 0; i < array_length(manager_list); i++){
 	instance_create_depth(x, y, depth, manager_list[i]);
 	show_debug_message(string(i) + " : " + "Initialized " + string(object_get_name(manager_list[i])) +"!");

@@ -7,7 +7,15 @@
 	global.Camera = view_camera[0];
 	global.CameraWidth = display_get_width()/8;
 	global.CameraHeight = display_get_height()/8;
-	View_Target = oTest;
+	
+	if(instance_number(oPlayer) > 1){
+		for(var i = 0; i < instance_number(oPlayer); i++){
+			var _inst = instance_find(oPlayer, i);
+			if(_inst.is_local = true){
+					View_Target = _inst;
+			}
+		}
+	}else{ View_Target = oPlayer; }
 		
 	//Camera additions
 

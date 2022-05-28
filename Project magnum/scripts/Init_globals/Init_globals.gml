@@ -56,6 +56,14 @@ function Init_globals(){
 		global.NewInputSetting = false;
 	#endregion 
 
+	#region | Network 
+		global.NetworkServer = -1;
+		global.NetworkPort = 3000;
+		global.NetworkIp =  "127.0.0.1";
+		global.NetworkMaxClients = 1;
+		
+	#endregion
+	
 
 }
 

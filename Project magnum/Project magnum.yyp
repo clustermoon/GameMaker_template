@@ -2,7 +2,7 @@
   "resources": [
     {"id":{"name":"input_check_axis","path":"scripts/input_check_axis/input_check_axis.yy",},"order":1,},
     {"id":{"name":"room_goto_menu","path":"scripts/room_goto_menu/room_goto_menu.yy",},"order":9,},
-    {"id":{"name":"oTest","path":"objects/oTest/oTest.yy",},"order":1,},
+    {"id":{"name":"oPlayer","path":"objects/oPlayer/oPlayer.yy",},"order":1,},
     {"id":{"name":"sMask_green","path":"sprites/sMask_green/sMask_green.yy",},"order":1,},
     {"id":{"name":"host_game","path":"scripts/host_game/host_game.yy",},"order":11,},
     {"id":{"name":"rmSplashScreen","path":"rooms/rmSplashScreen/rmSplashScreen.yy",},"order":1,},
@@ -34,6 +34,7 @@
     {"id":{"name":"oGame_init","path":"objects/oGame_init/oGame_init.yy",},"order":2,},
     {"id":{"name":"start_game","path":"scripts/start_game/start_game.yy",},"order":10,},
     {"id":{"name":"input_check_released","path":"scripts/input_check_released/input_check_released.yy",},"order":3,},
+    {"id":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"order":3,},
     {"id":{"name":"draw_animated_background","path":"scripts/draw_animated_background/draw_animated_background.yy",},"order":0,},
     {"id":{"name":"oManager_camera","path":"objects/oManager_camera/oManager_camera.yy",},"order":4,},
     {"id":{"name":"exit_game","path":"scripts/exit_game/exit_game.yy",},"order":6,},
