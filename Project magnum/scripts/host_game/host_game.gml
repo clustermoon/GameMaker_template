@@ -3,7 +3,8 @@ function host_game(){
 
 	// Failed
 	if (global.NetworkServer < 0){
-		show_error("Could not create server.", false);	
+		show_error("Could not create server.", false);
+		game_restart();
 	}else{
 		show_debug_message("Created server!");
 		room_goto(rmTestGrounds);

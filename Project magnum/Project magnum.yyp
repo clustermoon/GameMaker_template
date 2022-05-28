@@ -34,6 +34,7 @@
     {"id":{"name":"oGame_init","path":"objects/oGame_init/oGame_init.yy",},"order":2,},
     {"id":{"name":"start_game","path":"scripts/start_game/start_game.yy",},"order":10,},
     {"id":{"name":"input_check_released","path":"scripts/input_check_released/input_check_released.yy",},"order":3,},
+    {"id":{"name":"server_data","path":"scripts/server_data/server_data.yy",},"order":0,},
     {"id":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"order":3,},
     {"id":{"name":"draw_animated_background","path":"scripts/draw_animated_background/draw_animated_background.yy",},"order":0,},
     {"id":{"name":"oManager_camera","path":"objects/oManager_camera/oManager_camera.yy",},"order":4,},
@@ -96,6 +97,7 @@
     {"folderPath":"folders/Scripts/Menu/drawing.yy","order":2,"resourceVersion":"1.0","name":"drawing","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Objects/MenuHandling.yy","order":2,"resourceVersion":"1.0","name":"MenuHandling","tags":[],"resourceType":"GMFolder",},
     {"folderPath":"folders/Scripts/Menu/actions.yy","order":3,"resourceVersion":"1.0","name":"actions","tags":[],"resourceType":"GMFolder",},
+    {"folderPath":"folders/Scripts/Network.yy","order":5,"resourceVersion":"1.0","name":"Network","tags":[],"resourceType":"GMFolder",},
   ],
   "AudioGroups": [
     {"targets":-1,"resourceVersion":"1.3","name":"audiogroup_default","resourceType":"GMAudioGroup",},

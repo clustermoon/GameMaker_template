@@ -4,6 +4,7 @@ function connect_to_game(){
 	
 	if(res < 0){
 		show_error("Could not connect to Server.", false);	
+		game_restart();
 	}else{
 		show_debug_message("Connected to server!");
 		room_goto(rmTestGrounds);
