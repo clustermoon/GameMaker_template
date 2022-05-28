@@ -48,6 +48,8 @@ function Init_globals(){
 		global.Pause = false;		// Boolean used to pause the game while running.
 		global.Freeze = false;		// Will Stop Managers and code from being run. DEBUG USE ONLY.
 	
+		global.MultiplayerGame = false;
+		
 	#endregion
 
 	#region | Changable settings

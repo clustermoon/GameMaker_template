@@ -20,12 +20,21 @@ enum menu_element_type {
 }
 
 ///Create Menu Pages
-ds_menu_main = create_menu_page(
-	["START",						menu_element_type.script_runner,		start_game],
-	["LOAD",						menu_element_type.script_runner,		load_save],
-	["SETTINGS",					menu_element_type.page_transfer,		menu_page.settings],
-	["EXIT",							menu_element_type.script_runner,		exit_game]
-);
+if(!global.MultiplayerGame){
+	ds_menu_main = create_menu_page(
+		["START",						menu_element_type.script_runner,		start_game],
+		["LOAD",						menu_element_type.script_runner,		load_save],
+		["SETTINGS",					menu_element_type.page_transfer,		menu_page.settings],
+		["EXIT",							menu_element_type.script_runner,		exit_game]
+	);
+}else{
+	ds_menu_main = create_menu_page(
+		["HOST",							menu_element_type.script_runner,		host_game],
+		["CONNECT",					menu_element_type.script_runner,		connect_to_game],
+		["SETTINGS",					menu_element_type.page_transfer,		menu_page.settings],
+		["EXIT",							menu_element_type.script_runner,		exit_game]
+	);	
+}
 
 ds_menu_pause = create_menu_page(
 	["RESUME",					menu_element_type.script_runner,		resume_game],
