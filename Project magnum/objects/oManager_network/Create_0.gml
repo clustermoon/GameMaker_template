@@ -10,7 +10,8 @@ is_server = false;
 // Data types
 enum eData {
 		initData,
-		playerUpdate
+		playerUpdate,
+		playerJoined
 }
 
 // Connected clients
