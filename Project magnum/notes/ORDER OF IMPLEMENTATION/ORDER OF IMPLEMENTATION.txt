@@ -3,6 +3,11 @@ Step 4: Network Manager
 	so all aspects of the project are integrated before
 	additional complexity is added.
 	
+	https://www.youtube.com/watch?v=2mLOke0VllQ
+	
+	get packets being sent and read on one device
+	
+	
 Step 5: Menu Manager
 	We need a robust menu manager that is easiy to add,
 	and change according to the project needs. Being able to
