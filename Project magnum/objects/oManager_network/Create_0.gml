@@ -16,7 +16,20 @@ enum eData {
 		playerJoined
 }
 
+enum eNetwork {
+	join,
+	move,
+	disconnect
+}
+
 // Connected clients
 clients = ds_list_create();
 
+player_instances = ds_map_create();
+
+idd = 0;
+Player = instance_create_depth(x, y, depth, oPlayer);
+idd = Player.player_id;
+
+ds_map_add(player_instances, idd, Player);
 

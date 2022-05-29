@@ -6,6 +6,7 @@ function connect_to_game(){
 		show_error("Could not connect to Server.", false);	
 		game_restart();
 	}else{
+		oManager_network.is_server = false;
 		show_debug_message("Connected to server!");
 		room_goto(rmTestGrounds);
 	}

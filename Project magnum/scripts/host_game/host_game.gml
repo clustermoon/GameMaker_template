@@ -8,6 +8,6 @@ function host_game(){
 	}else{
 		show_debug_message("Created server!");
 		room_goto(rmTestGrounds);
-		is_server = true;
+		oManager_network.is_server = true;
 	}
 }
