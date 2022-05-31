@@ -1,4 +1,5 @@
 function host_game(){
+	/*
 	global.NetworkServer = network_create_server(network_socket_tcp, global.NetworkPort, global.NetworkMaxClients);
 
 	// Failed
@@ -10,4 +11,5 @@ function host_game(){
 		room_goto(rmTestGrounds);
 		oManager_network.is_server = true;
 	}
+	*/
 }
