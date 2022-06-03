@@ -8,7 +8,6 @@ if(room == rmMain){
 		var dkey = input_check_pressed(eInputState.padd) || keyboard_check_pressed(vk_down);
 		
 		if(inputting){
-			
 			switch(ds_grid[# 1, menu_option[page]]){
 				case menu_element_type.shift : 
 					var hinput = rkey - lkey;

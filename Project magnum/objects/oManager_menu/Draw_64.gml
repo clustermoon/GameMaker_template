@@ -5,7 +5,9 @@ if(room == rmMain){
 		var start_y = (global.CameraHeight/2) - ((((ds_height-1)/2) * y_buffer)), start_x = global.CameraWidth/2;
 		var _c = c_black
 		var _f = fntDebug;
+		var scale =  display_get_width()/480;
 	
+		show_debug_message(scale);
 	
 		draw_set_font(_f);
 	
@@ -27,7 +29,7 @@ if(room == rmMain){
 				xo = + (x_buffer/2);
 			}
 		
-			draw_text_transformed_color(ltx-xo, lty, ds_grid[# 0, yy], 0.25, 0.25, 0, _c , _c, _c, _c, 1);
+			draw_text_transformed_color(ltx-xo, lty, ds_grid[# 0, yy], scale, scale, 0, _c , _c, _c, _c, 1);
 			yy++;
 		}
 	

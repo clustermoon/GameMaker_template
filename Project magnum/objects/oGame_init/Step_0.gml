@@ -12,7 +12,9 @@ if(wait_time < 0){
 		}
 	#endregion
 	
+	
 	room_goto(rmMain);
 }
 
+zoom = display_get_width()/480;
 

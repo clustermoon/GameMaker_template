@@ -1,3 +1,0 @@
-function server_data(){
-
-}

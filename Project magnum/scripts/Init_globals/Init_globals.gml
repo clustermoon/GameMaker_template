@@ -58,9 +58,19 @@ function Init_globals(){
 
 	#region | Network 
 		global.NetworkSocket = noone;
-		global.NetworkPort = 3000;
+		global.NetworkPort = 59975;
 		global.NetworkIp =  "127.0.0.1";
-		global.NetworkMaxClients = 1;
+		global.NetworkIsHost = false;
+		
+		global.NetworkHostNumber = noone;
+		global.NetworkPlayerNumber = noone;
+		
+		enum eNetworkMsgType {
+			create_host, 
+			join_host, 
+			stop_host,
+			set_player_state
+		}
 		
 	#endregion
 	

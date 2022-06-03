@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Network.yy",
   },
   "resourceVersion": "1.0",
-  "name": "server_data",
+  "name": "send_map_udp",
   "tags": [],
   "resourceType": "GMScript",
 }

@@ -17,7 +17,7 @@
 		}
 	}else{ View_Target = oPlayer; }
 		
-	//Camera additions
+	//Camera additions 
 
 	global.CameraZoom = 960/global.CameraWidth;
 	global.CameraShake = 0;

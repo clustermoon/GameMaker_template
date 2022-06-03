@@ -15,7 +15,7 @@
 	_spY = room_height/2;
 	_spRot = 0;
 
-	var _scale = ceil(display_get_height() * 0.001);
+	var _scale = zoom;
 #endregion
 
 #region | polish background
@@ -31,7 +31,7 @@
 #endregion
 
 #region | Draw animated background
-	 draw_animated_background = function(sprite, spd, xspd, yspd, xx, yy, xscale, yscale, col, alpha){
+	 draw_background = function(sprite, spd, xspd, yspd, xx, yy, xscale, yscale, col, alpha){
 		static subimg = 0;
 		
 		var _s = spd * global.DeltaMultiplyer;
@@ -46,11 +46,11 @@
 		if(subimg > _cap){ subimg = 0; }
 		if(_ys > 9999){ _ys = 0; } if(_xs > 9999){ _xs = 0; }
 	}
-	draw_animated_background(_bgSpr, _bgSpd, _bgXspd, _bgYspd, _bgX, _bgY, _scale, _scale, c_white, 1);
+	draw_background(_bgSpr, _bgSpd, _bgXspd, _bgYspd, _bgX, _bgY, _scale, _scale, c_white, 1);
 #endregion
 
 #region | Draw animated Sprite
-	draw_animated_sprite = function(sprite, spd, xx, yy, xscale, yscale, rot, col, alpha){
+	draw_logo = function(sprite, spd, xx, yy, xscale, yscale, rot, col, alpha){
 		static subimg = 0;
 		var _s = spd *  global.DeltaMultiplyer;
 		subimg += _s;
@@ -58,7 +58,7 @@
 		var _cap = sprite_get_number(sprite);
 		if(subimg > _cap){ subimg = 0; }
 	}
-	draw_animated_sprite(_spSpr, _spSpd, _spX, _spY, _scale/1.5, _scale/1.5, _spRot, c_white, 1);
+	draw_logo(_spSpr, _spSpd, _spX, _spY, _scale/1.5, _scale/1.5, _spRot, c_white, 1);
 #endregion
 
 

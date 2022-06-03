@@ -1,15 +1,12 @@
 function host_game(){
-	/*
-	global.NetworkServer = network_create_server(network_socket_tcp, global.NetworkPort, global.NetworkMaxClients);
+	show_debug_message("Host button clicked");
+	//global.NetworkIsHost = true;
+	data = ds_map_create();
+	
+	ds_map_add(data, "hostNumber", noone);
+	ds_map_add(data, "playerNumber", noone);
+	
+	send_map_udp(global.NetworkIp, global.NetworkPort, 100, data, eNetworkMsgType.create_host);
 
-	// Failed
-	if (global.NetworkServer < 0){
-		show_error("Could not create server.", false);
-		game_restart();
-	}else{
-		show_debug_message("Created server!");
-		room_goto(rmTestGrounds);
-		oManager_network.is_server = true;
-	}
-	*/
+	room_goto(rmLobby);
 }
