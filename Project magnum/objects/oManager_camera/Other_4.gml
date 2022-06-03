@@ -5,17 +5,30 @@
 	//Initilize view
 
 	global.Camera = view_camera[0];
-	global.CameraWidth = display_get_width()/8;
-	global.CameraHeight = display_get_height()/8;
+	global.CameraWidth = 0;
+	global.CameraHeight = 540;
 	
-	if(instance_number(oPlayer) > 1){
-		for(var i = 0; i < instance_number(oPlayer); i++){
-			var _inst = instance_find(oPlayer, i);
-			if(_inst.is_local = true){
-					View_Target = _inst;
-			}
+	aspect_ratio = display_get_width() / display_get_height();
+	
+	global.CameraWidth = round(global.CameraHeight*aspect_ratio);
+
+	if(global.CameraWidth & 1){ global.CameraWidth++; }
+
+	
+	#region | multiplayer camera
+		if(global.MultiplayerGame){
+			/*
+			if(instance_number(oPlayer) > 1){
+				for(var i = 0; i < instance_number(oPlayer); i++){
+					var _inst = instance_find(oPlayer, i);
+					if(_inst.is_local = true){
+							View_Target = _inst;
+					}
+				}
+			}else{ View_Target = oPlayer; }
+			*/
 		}
-	}else{ View_Target = oPlayer; }
+	#endregion
 		
 	//Camera additions 
 

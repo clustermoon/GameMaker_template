@@ -1,9 +1,6 @@
-The menu's do not scale correctly on different resolution monitors.
-Potentially nothing scales with different resolution monitors so we need to fix that.
-
 The menu buttons cannot be clicked.
 I want the buttons to animate more when interacted with.
 
-camera jitters for some reason
+
 
 

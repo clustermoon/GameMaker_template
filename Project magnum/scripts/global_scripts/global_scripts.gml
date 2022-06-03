@@ -36,14 +36,6 @@ function Init_globals(){
 		global.Input = array_create(18);
 	#endregion
 
-	#region | Camera
-		global.Camera = view_camera[0];
-		global.CameraWidth = display_get_width()/2;
-		global.CameraHeight =display_get_height()/2;
-		global.CameraZoom = 960/global.CameraWidth; 
-		global.CameraShake = 0; 
-	#endregion
-
 	#region | Game Control
 		global.Pause = false;		// Boolean used to pause the game while running.
 		global.Freeze = false;		// Will Stop Managers and code from being run. DEBUG USE ONLY.
@@ -77,5 +69,15 @@ function Init_globals(){
 
 }
 
+function init_globals_camera(){
+	#region | Camera
+		global.Camera = view_camera[0];
+		global.CameraWidth = display_get_width()/2;
+		global.CameraHeight =display_get_height()/2;
+		global.CameraZoom = 960/global.CameraWidth; 
+		global.CameraShake = 0; 
+	#endregion
+	
+}
 
 

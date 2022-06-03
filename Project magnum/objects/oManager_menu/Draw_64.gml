@@ -5,9 +5,7 @@ if(room == rmMain){
 		var start_y = (global.CameraHeight/2) - ((((ds_height-1)/2) * y_buffer)), start_x = global.CameraWidth/2;
 		var _c = c_black
 		var _f = fntDebug;
-		var scale =  display_get_width()/480;
-	
-		show_debug_message(scale);
+		var scale =  0.5;
 	
 		draw_set_font(_f);
 	

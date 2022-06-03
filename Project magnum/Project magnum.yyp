@@ -45,7 +45,7 @@
     {"id":{"name":"oManager_system","path":"objects/oManager_system/oManager_system.yy",},"order":3,},
     {"id":{"name":"logic_xor","path":"scripts/logic_xor/logic_xor.yy",},"order":1,},
     {"id":{"name":"sMask_blue","path":"sprites/sMask_blue/sMask_blue.yy",},"order":0,},
-    {"id":{"name":"Init_globals","path":"scripts/Init_globals/Init_globals.yy",},"order":2,},
+    {"id":{"name":"global_scripts","path":"scripts/global_scripts/global_scripts.yy",},"order":2,},
     {"id":{"name":"create_menu_page","path":"scripts/create_menu_page/create_menu_page.yy",},"order":5,},
     {"id":{"name":"change_resolution","path":"scripts/change_resolution/change_resolution.yy",},"order":1,},
     {"id":{"name":"disconnect_from_host","path":"scripts/disconnect_from_host/disconnect_from_host.yy",},"order":1,},

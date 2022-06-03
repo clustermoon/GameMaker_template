@@ -12,7 +12,7 @@ zoom = 1;
 //Spawn Managers
 
 
-manager_list = [oManager_system, oManager_input, oManager_menu, oManager_sound];
+manager_list = [oManager_camera, oManager_system, oManager_input, oManager_menu, oManager_sound];
 
 
 for(var i = 0; i < array_length(manager_list); i++){
