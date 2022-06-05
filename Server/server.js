@@ -59,11 +59,8 @@ function create_host(data, rinfo){
 
 // Stop host
 function stop_host(data, rinfo){
-    console.log("we are in the stop function");
-
     var host_to_stop = hosts.indexOf(data.hostNumber);
     hosts.splice(host_to_stop, 1);
-
     console.table(hosts);
 }
 

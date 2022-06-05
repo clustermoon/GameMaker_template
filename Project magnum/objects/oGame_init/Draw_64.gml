@@ -15,7 +15,7 @@
 	_spY = room_height/2;
 	_spRot = 0;
 
-	var _scale = zoom;
+	var _scale = 4;
 #endregion
 
 #region | polish background

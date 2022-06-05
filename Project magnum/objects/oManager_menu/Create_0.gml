@@ -1,5 +1,3 @@
-//display_set_gui_size(View_Width, View_Height);
-
 enum menu_page {
 	main, 
 	pause, 

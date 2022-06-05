@@ -7,7 +7,7 @@ height = display_get_height()/2;//540;
 window_set_size(width, height);
 
 angle = 0;
-zoom = 1;
+
 
 //Spawn Managers
 

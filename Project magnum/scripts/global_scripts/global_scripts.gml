@@ -52,7 +52,9 @@ function Init_globals(){
 		global.NetworkSocket = noone;
 		global.NetworkPort = 59975;
 		global.NetworkIp =  "127.0.0.1";
-		global.NetworkIsHost = false;
+		
+		global.NetworkIsHostStop = false;
+		global.NetworkShouldHostStop = false;
 		
 		global.NetworkHostNumber = noone;
 		global.NetworkPlayerNumber = noone;

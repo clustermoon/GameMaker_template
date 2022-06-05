@@ -32,7 +32,7 @@
 		
 	//Camera additions 
 
-	global.CameraZoom = 960/global.CameraWidth;
+	global.CameraZoom = 1;//960/global.CameraWidth;
 	global.CameraShake = 0;
 	
 	view_enabled = true;

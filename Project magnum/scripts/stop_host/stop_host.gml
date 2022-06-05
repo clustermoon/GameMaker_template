@@ -1,4 +1,4 @@
-function disconnect_from_host(){	
+function stop_host(){	
 	data = ds_map_create();
 	ds_map_add(data, "hostNumber", global.NetworkHostNumber);
 	

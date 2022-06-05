@@ -1,7 +1,7 @@
 if(room == rmMain){
 	#region | Main menu
 		var ds_grid = menu_pages[page], ds_height = ds_grid_height(ds_grid);
-		var y_buffer = 32, x_buffer = 16;
+		var y_buffer = 48, x_buffer = 16;
 		var start_y = (global.CameraHeight/2) - ((((ds_height-1)/2) * y_buffer)), start_x = global.CameraWidth/2;
 		var _c = c_black
 		var _f = fntDebug;
@@ -55,7 +55,7 @@ if(room == rmMain){
 				
 					if(inputting && yy == menu_option[page]){ _c = c_yellow; } 
 
-					draw_text_transformed_color(rtx, rty, left_shift + current_array[current_val] + right_shift,0.25, 0.25, 0, _c, _c, _c, _c, 1);
+					draw_text_transformed_color(rtx, rty, left_shift + current_array[current_val] + right_shift,scale, scale, 0, _c, _c, _c, _c, 1);
 				
 				break;
 				case menu_element_type.slider:
@@ -70,7 +70,7 @@ if(room == rmMain){
 					if(inputting && yy == menu_option[page]){ _c = c_yellow; } 
 				
 					draw_circle_color(rtx + (circle_pos*len), rty, 4, _c, _c, false);
-					draw_text_transformed_color(rtx + (len*1.2), rty, string(floor(circle_pos*100)) + "%",0.25, 0.25, 0, _c, _c, _c, _c, 1);
+					draw_text_transformed_color(rtx + (len*1.2), rty, string(floor(circle_pos*100)) + "%",scale, scale, 0, _c, _c, _c, _c, 1);
 				break;
 				case menu_element_type.toggle:
 					var current_val = ds_grid[# 3, yy];
@@ -81,8 +81,8 @@ if(room == rmMain){
 				
 					if(current_val == 0){ _c1 = _c; _c2 = c_dkgray; }else{ _c2 = _c; _c1 = c_dkgray; }
 				
-					draw_text_transformed_color(rtx, rty, "ON", 0.25, 0.25, 0, _c1, _c1, _c1, _c1, 1);
-					draw_text_transformed_color(rtx + 64, rty, "OFF", 0.25, 0.25, 0, _c2, _c2, _c2, _c2, 1);
+					draw_text_transformed_color(rtx, rty, "ON", scale, scale, 0, _c1, _c1, _c1, _c1, 1);
+					draw_text_transformed_color(rtx + 64, rty, "OFF", scale, scale, 0, _c2, _c2, _c2, _c2, 1);
 				
 				break;
 			}	
@@ -99,6 +99,7 @@ if(room == rmMain){
 		var start_y = (global.CameraHeight/2) - ((((ds_height-1)/2) * y_buffer)), start_x = global.CameraWidth/2;
 		var _c = c_black
 		var _f = fntDebug;
+		var scale =  0.5;
 	
 	
 		draw_set_font(_f);
@@ -121,7 +122,7 @@ if(room == rmMain){
 				xo = + (x_buffer/2);
 			}
 		
-			draw_text_transformed_color(ltx-xo, lty, ds_grid[# 0, yy],0.25, 0.25, 0, _c , _c, _c, _c, 1);
+			draw_text_transformed_color(ltx-xo, lty, ds_grid[# 0, yy],scale, scale, 0, _c , _c, _c, _c, 1);
 			yy++;
 		}
 	
@@ -149,7 +150,7 @@ if(room == rmMain){
 				
 					if(inputting && yy == pause_option[page]){ _c = c_yellow; } 
 
-					draw_text_transformed_color(rtx, rty, left_shift + current_array[current_val] + right_shift,0.25, 0.25, 0, _c, _c, _c, _c, 1);
+					draw_text_transformed_color(rtx, rty, left_shift + current_array[current_val] + right_shift, scale, scale, 0, _c, _c, _c, _c, 1);
 				
 				break;
 				case menu_element_type.slider:
@@ -164,7 +165,7 @@ if(room == rmMain){
 					if(inputting && yy == pause_option[page]){ _c = c_yellow; } 
 				
 					draw_circle_color(rtx + (circle_pos*len), rty, 4, _c, _c, false);
-					draw_text_transformed_color(rtx + (len*1.2), rty, string(floor(circle_pos*100)) + "%",0.25, 0.25, 0, _c, _c, _c, _c, 1);
+					draw_text_transformed_color(rtx + (len*1.2), rty, string(floor(circle_pos*100)) + "%",scale, scale, 0, _c, _c, _c, _c, 1);
 				break;
 				case menu_element_type.toggle:
 					var current_val = ds_grid[# 3, yy];
@@ -175,8 +176,8 @@ if(room == rmMain){
 				
 					if(current_val == 0){ _c1 = _c; _c2 = c_dkgray; }else{ _c2 = _c; _c1 = c_dkgray; }
 				
-					draw_text_transformed_color(rtx, rty, "ON", 0.25, 0.25, 0, _c1, _c1, _c1, _c1, 1);
-					draw_text_transformed_color(rtx + 128, rty, "OFF", 0.25, 0.25, 0, _c2, _c2, _c2, _c2, 1);
+					draw_text_transformed_color(rtx, rty, "ON", scale, scale, 0, _c1, _c1, _c1, _c1, 1);
+					draw_text_transformed_color(rtx + 128, rty, "OFF", scale, scale, 0, _c2, _c2, _c2, _c2, 1);
 				
 				break;
 			}	

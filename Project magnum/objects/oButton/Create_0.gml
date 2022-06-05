@@ -1,4 +1,0 @@
-clicked = false;
-
-
-
