@@ -1,4 +1,3 @@
 function connect_to_game(){
-
-	//global.NetworkIsHost = false;
+	room_goto(rmJoinLobby);
 }

@@ -1,11 +1,8 @@
 /// @description
-//if(!global.NetworkIsHost) exit;
-
 if(async_load[? "size"] > 0){
 	var buff = async_load[? "buffer"];
 	buffer_seek(buff, buffer_seek_start, 0);
 	var msdID = buffer_read(buff, buffer_string);
-	
 	var response = json_decode(msdID);
 	
 	if(ds_map_find_value(response, "type") == eNetworkMsgType.create_host){
@@ -19,4 +16,22 @@ if(async_load[? "size"] > 0){
 		
 	}
 	
+	if(ds_map_find_value(response, "type") == eNetworkMsgType.stop_host){
+		var res = ds_map_find_value(response, "res");
+		if(res == "stopped"){
+			global.NetworkIsHostStop = true;
+			global.Pause = false;
+			room_goto(rmMain); 
+		}
+	}
+	
+	if(ds_map_find_value(response, "type") == eNetworkMsgType.get_host){
+		var hosts = ds_map_find_value(response, "hosts");
+		number_of_hosts = ds_list_size(hosts);
+		for (var i = 0; i < number_of_hosts; i++) {
+		    var availableHost  = ds_list_find_value(hosts, i);
+			number_of_players = ds_list_size(availableHost);
+			recievedHosts = true;
+		}
+	}
 }

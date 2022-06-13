@@ -53,6 +53,8 @@ function Init_globals(){
 		global.NetworkPort = 59975;
 		global.NetworkIp =  "127.0.0.1";
 		
+		//global.NetworkIsHost = false;
+		
 		global.NetworkIsHostStop = false;
 		global.NetworkShouldHostStop = false;
 		
@@ -63,7 +65,8 @@ function Init_globals(){
 			create_host, 
 			join_host, 
 			stop_host,
-			set_player_state
+			set_player_state,
+			get_host
 		}
 		
 	#endregion

@@ -14,6 +14,7 @@
     {"id":{"name":"change_controller_type","path":"scripts/change_controller_type/change_controller_type.yy",},"order":0,},
     {"id":{"name":"oManager_input","path":"objects/oManager_input/oManager_input.yy",},"order":0,},
     {"id":{"name":"input_check_pressed","path":"scripts/input_check_pressed/input_check_pressed.yy",},"order":2,},
+    {"id":{"name":"join_online_game","path":"scripts/join_online_game/join_online_game.yy",},"order":13,},
     {"id":{"name":"sndTest_soundeffects","path":"sounds/sndTest_soundeffects/sndTest_soundeffects.yy",},"order":2,},
     {"id":{"name":"Unfinished work","path":"notes/Unfinished work/Unfinished work.yy",},"order":18,},
     {"id":{"name":"choose_load_option","path":"scripts/choose_load_option/choose_load_option.yy",},"order":4,},
@@ -47,6 +48,7 @@
     {"id":{"name":"global_scripts","path":"scripts/global_scripts/global_scripts.yy",},"order":2,},
     {"id":{"name":"create_menu_page","path":"scripts/create_menu_page/create_menu_page.yy",},"order":5,},
     {"id":{"name":"change_resolution","path":"scripts/change_resolution/change_resolution.yy",},"order":1,},
+    {"id":{"name":"rmJoinLobby","path":"rooms/rmJoinLobby/rmJoinLobby.yy",},"order":1,},
     {"id":{"name":"stop_host","path":"scripts/stop_host/stop_host.yy",},"order":1,},
     {"id":{"name":"oManager_menu","path":"objects/oManager_menu/oManager_menu.yy",},"order":5,},
     {"id":{"name":"sMask_Button","path":"sprites/sMask_Button/sMask_Button.yy",},"order":3,},
@@ -71,6 +73,7 @@
     {"roomId":{"name":"rmTestGrounds","path":"rooms/rmTestGrounds/rmTestGrounds.yy",},},
     {"roomId":{"name":"rmMain","path":"rooms/rmMain/rmMain.yy",},},
     {"roomId":{"name":"rmLobby","path":"rooms/rmLobby/rmLobby.yy",},},
+    {"roomId":{"name":"rmJoinLobby","path":"rooms/rmJoinLobby/rmJoinLobby.yy",},},
   ],
   "Folders": [
     {"folderPath":"folders/Sprites.yy","order":0,"resourceVersion":"1.0","name":"Sprites","tags":[],"resourceType":"GMFolder",},
@@ -111,7 +114,7 @@
   ],
   "IncludedFiles": [],
   "MetaData": {
-    "IDEVersion": "2022.5.0.8",
+    "IDEVersion": "2022.5.1.14",
   },
   "resourceVersion": "1.5",
   "name": "Project magnum",

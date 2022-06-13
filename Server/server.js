@@ -11,7 +11,8 @@ const msgType = {
     create_host      : 0,
     join_host        : 1,
     stop_host        : 2,
-    set_player_state : 3
+    set_player_state : 3,
+    get_host         : 4
 }
 
 // Player class
@@ -37,6 +38,14 @@ server.on("message", function(msg, rinfo){
         case msgType.stop_host :
             stop_host(data, rinfo);
         break;
+
+        case msgType.get_host :
+            get_host(data, rinfo);
+        break;
+
+        case msgType.join_host :
+            join_host(data, rinfo);
+        break;
     }
 });
 
@@ -61,9 +70,22 @@ function create_host(data, rinfo){
 function stop_host(data, rinfo){
     var host_to_stop = hosts.indexOf(data.hostNumber);
     hosts.splice(host_to_stop, 1);
+
+    data.res = "stopped";
+    server.send(JSON.stringify(data), rinfo.port, rinfo.address );
+    
     console.table(hosts);
 }
 
+// Get host
+function get_host(data, rinfo){
+    data.hosts = hosts;
+    server.send(JSON.stringify(data), rinfo.port, rinfo.address );
+}
+
+function join_host(data, rinfo){
+
+}
 
 // Port to bind server to
 server.bind(59975);
