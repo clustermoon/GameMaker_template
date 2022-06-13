@@ -26,7 +26,6 @@
     {"id":{"name":"connect_to_game","path":"scripts/connect_to_game/connect_to_game.yy",},"order":12,},
     {"id":{"name":"sndTest_master","path":"sounds/sndTest_master/sndTest_master.yy",},"order":0,},
     {"id":{"name":"rmLobby","path":"rooms/rmLobby/rmLobby.yy",},"order":0,},
-    {"id":{"name":"ORDER OF IMPLEMENTATION","path":"notes/ORDER OF IMPLEMENTATION/ORDER OF IMPLEMENTATION.yy",},"order":16,},
     {"id":{"name":"save_game","path":"scripts/save_game/save_game.yy",},"order":3,},
     {"id":{"name":"send_map_udp","path":"scripts/send_map_udp/send_map_udp.yy",},"order":0,},
     {"id":{"name":"rmTestGrounds","path":"rooms/rmTestGrounds/rmTestGrounds.yy",},"order":2,},

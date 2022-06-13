@@ -1,6 +1,0 @@
-The menu buttons cannot be clicked.
-I want the buttons to animate more when interacted with.
-
-
-
-
