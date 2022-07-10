@@ -11,8 +11,8 @@
 	var _spSpr, _spSpd, _spX, _spY, _spRot;
 	_spSpr = bgSplashScreen;
 	_spSpd = 0.025;
-	_spX = room_width/2;
-	_spY = room_height/2;
+	_spX = global.WindowWidth_target/2;
+	_spY = global.WindowHeight_target/2;
 	_spRot = 0;
 
 	var _scale = 4;
@@ -31,7 +31,7 @@
 #endregion
 
 #region | Draw animated background
-	 draw_background = function(sprite, spd, xspd, yspd, xx, yy, xscale, yscale, col, alpha){
+	 var draw_background = function(sprite, spd, xspd, yspd, xx, yy, xscale, yscale, col, alpha){
 		static subimg = 0;
 		
 		var _s = spd * global.DeltaMultiplyer;
@@ -50,7 +50,7 @@
 #endregion
 
 #region | Draw animated Sprite
-	draw_logo = function(sprite, spd, xx, yy, xscale, yscale, rot, col, alpha){
+	var draw_logo = function(sprite, spd, xx, yy, xscale, yscale, rot, col, alpha){
 		static subimg = 0;
 		var _s = spd *  global.DeltaMultiplyer;
 		subimg += _s;

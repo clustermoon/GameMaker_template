@@ -1,23 +1,41 @@
 /// @description Initialize the project
 
-wait_time = 3.5;
-width = display_get_width()/2;//960;
-height = display_get_height()/2;//540;
+#region | Globals
 
-window_set_size(width, height);
+	global.DisplayWidth				= display_get_width();
+	global.DisplayHeight			= display_get_height();
 
-angle = 0;
+	global.WindowWidth_real			= window_get_width();
+	global.WindowHeight_real		= window_get_height();
 
+	global.WindowWidth_target		= global.DisplayWidth/2;
+	global.WindowHeight_target		= global.DisplayHeight/2;
 
-//Spawn Managers
+#endregion
 
+#region | Screen Settings
 
-manager_list = [oManager_camera, oManager_system, oManager_input, oManager_menu, oManager_sound];
+	window_set_size(global.WindowWidth_target, global.WindowHeight_target);
+	window_center();
+	
+#endregion
 
+#region | Initializing Managers
 
-for(var i = 0; i < array_length(manager_list); i++){
-	instance_create_depth(x, y, depth, manager_list[i]);
-	show_debug_message(string(i) + " : " + "Initialized " + string(object_get_name(manager_list[i])) +"!");
-}
+	// The Manager Array. Add Objects here to init an object at runtime.
+	var _managerArray = [
+		oManager_system,
+		oManager_camera,
+		oSplashScreen,
+		oManager_input,
+		oManager_sound
+	];
 
-
+	// Creates all objects in _managerArray
+	for(var i = 0; i < array_length(_managerArray); i++){
+		if(!instance_exists(_managerArray[i])){
+			instance_create_depth(0, 0, 0, _managerArray[i]);
+		}
+	}
+	
+#endregion

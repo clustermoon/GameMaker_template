@@ -4,7 +4,7 @@
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
-  "persistent": true,
+  "persistent": false,
   "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
@@ -26,7 +26,7 @@
     "path": "folders/Objects/Game Controllers/Parents.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oEntity",
+  "name": "oButton",
   "tags": [],
   "resourceType": "GMObject",
 }
