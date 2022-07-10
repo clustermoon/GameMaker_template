@@ -4,6 +4,12 @@ global.NetworkIp =  "127.0.0.1";
 global.NetworkSocket = network_create_socket(network_socket_udp);
 
 
+attemptJoin = false;
+joinSucceed = false;
+
+attemptLeave = false;
+leaveSucceed = false;
+
 recievedHosts = false;
 retrieveHosts = true;
 

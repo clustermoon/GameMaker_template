@@ -12,11 +12,13 @@ const msgType = {
     join_host        : 1,
     stop_host        : 2,
     set_player_state : 3,
-    get_host         : 4
+    get_host         : 4,
+    leave_host       : 5
 }
 
 // Player class
-function player(x, y){
+function player(playerNumber, x, y){
+    this.playerNumber = playerNumber;
     this.x = x;
     this.y = y;
 }
@@ -46,6 +48,10 @@ server.on("message", function(msg, rinfo){
         case msgType.join_host :
             join_host(data, rinfo);
         break;
+
+        case msgType.leave_host :
+            leave_host(data, rinfo);
+        break;
     }
 });
 
@@ -57,7 +63,7 @@ function set_player_state(data, rinfo){
 // Create hosts
 function create_host(data, rinfo){
     var hostNumber = hosts.length;
-    hosts.push([new player(0, 0)]);
+    hosts.push([new player(0, 0, 0)]);
     
     data.hostNumber = hostNumber;
     data.playerNumber = 0;
@@ -84,7 +90,22 @@ function get_host(data, rinfo){
 }
 
 function join_host(data, rinfo){
+    var number_of_players = hosts[data.hostNumber].length;
+    hosts[data.hostNumber].push(new player(number_of_players, 0, 0));
+    data.playerNumber = number_of_players;
+    server.send(JSON.stringify(data), rinfo.port, rinfo.address );
+    
+    console.table(hosts);
+}
 
+function leave_host(data, rinfo){
+    console.log("leave host function");
+    hosts[data.hostNumber].splice(data.hostNumber, 1);
+    server.send(JSON.stringify(data), rinfo.port, rinfo.address );
+    
+    data.res = "stopped";
+
+    console.table(hosts);
 }
 
 // Port to bind server to

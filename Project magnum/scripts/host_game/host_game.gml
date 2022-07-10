@@ -10,5 +10,7 @@ function host_game(){
 	global.NetworkIsHostStop = false;
 	global.NetworkShouldHostStop = false;
 
-	//room_goto(rmLobby);
+	global.NetworkIsHost = true;
+
+	room_goto(rmLobby);
 }

@@ -4,10 +4,16 @@ function room_goto_menu(){
 		room_goto(rmMain);
 	}else{
 		if(room == rmLobby){
-			global.NetworkShouldHostStop = true;
+			if(global.NetworkIsHost){
+				global.NetworkShouldHostStop = true;
+				global.NetworkIsHost = false;
+			}else{
+				oManager_network.attemptLeave = true;	
+			}
 		}
 		if (room == rmJoinLobby){
 			room_goto(rmMain);
 		}
 	}
+	global.Pause = false;
 }

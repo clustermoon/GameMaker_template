@@ -34,4 +34,18 @@ if(async_load[? "size"] > 0){
 			recievedHosts = true;
 		}
 	}
+	
+	if(ds_map_find_value(response, "type") == eNetworkMsgType.join_host){
+		global.NetworkPlayerNumber = ds_map_find_value(response, "playerNumber");
+		joinSucceed = true ;
+		room_goto(rmLobby);
+	}
+	
+	if(ds_map_find_value(response, "type") == eNetworkMsgType.leave_host){
+		show_debug_message("recived");
+		leaveSucceed = true;
+		global.NetworkIsConnected = false;
+		room_goto(rmMain);
+	}
+	
 }

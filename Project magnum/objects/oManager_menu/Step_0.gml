@@ -142,31 +142,31 @@ if(room == rmMain){
 		}
 	}
 	
-	if(room == rmJoinLobby){
-		var ds_height = oManager_network.number_of_hosts;
-		var enter = input_check_pressed(eInputState.aButton)  || keyboard_check_pressed(vk_enter);
-		var lkey = input_check_pressed(eInputState.padl) || keyboard_check_pressed(vk_left);
-		var rkey = input_check_pressed(eInputState.padr) || keyboard_check_pressed(vk_right);
-		var ukey = input_check_pressed(eInputState.padu) || keyboard_check_pressed(vk_up);
-		var dkey = input_check_pressed(eInputState.padd) || keyboard_check_pressed(vk_down);
+	#region | Networking
+		if(room == rmJoinLobby){
+			var ds_height = oManager_network.number_of_hosts;
+			var enter = input_check_pressed(eInputState.aButton)  || keyboard_check_pressed(vk_enter);
+			var lkey = input_check_pressed(eInputState.padl) || keyboard_check_pressed(vk_left);
+			var rkey = input_check_pressed(eInputState.padr) || keyboard_check_pressed(vk_right);
+			var ukey = input_check_pressed(eInputState.padu) || keyboard_check_pressed(vk_up);
+			var dkey = input_check_pressed(eInputState.padd) || keyboard_check_pressed(vk_down);
 		
-		var y_pos = dkey - ukey;
-		if(y_pos != 0){
-			network_cursor += y_pos;
-			if(network_cursor> ds_height-1){ network_cursor = 0; } 
-			if(network_cursor < 0){ network_cursor = ds_height-1; } 
-			//Play Audio Que
-		}
-		for(var k = 0; k < ds_height; k++){
-			if(k == network_cursor){
-				if(enter){ 
-					//var data = ds_map_create();
-					//ds_map_add(data, "hosts", k);
-					//send_map_udp(global.NetworkIp, global.NetworkPort, 100, data, eNetworkMsgType.join_host);
+			var y_pos = dkey - ukey;
+			if(y_pos != 0){
+				network_cursor += y_pos;
+				if(network_cursor> ds_height-1){ network_cursor = 0; } 
+				if(network_cursor < 0){ network_cursor = ds_height-1; } 
+				//Play Audio Que
+			}
+			for(var k = 0; k < ds_height; k++){
+				if(k == network_cursor){
+					if(enter){ 
+						global.NetworkIsConnected = true;
+						oManager_network.attemptJoin = true;
+					}
 				}
 			}
 		}
-		
-	}
+	#endregion
 #endregion
 }
