@@ -7,7 +7,7 @@
 #endregion 
 
 #region | Inputs
-	global.GamePad						= noone;
+	global.GamePad				    = noone;
 	global.CurrentInputDevice		= 0;
 	enum eInputDevice {
 		keyboard,
@@ -87,3 +87,10 @@
 
 
 #endregion
+
+#region | Drawing and scaling
+	
+	global.GUIScale = 1;
+		
+#endregion
+

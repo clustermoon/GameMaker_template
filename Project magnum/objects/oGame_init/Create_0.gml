@@ -31,7 +31,8 @@ show_debug_message("**********************************");
 		oManager_camera,
 		oSplashScreen,
 		oManager_input,
-		oManager_sound
+		oManager_sound,
+		oManager_Depth
 	];
 
 	// Creates all objects in _managerArray

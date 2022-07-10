@@ -1,4 +1,3 @@
-/// @description
 if(!global.Freeze){
 	#region | Switch Current device based on input
 	if(global.NewInputSetting == false){
@@ -77,8 +76,13 @@ if(!global.Freeze){
 	#endregion
 }
 
+// Pause Game
 if(input_check_pressed(eInputState.start)){
 	global.Pause = !global.Pause;	
 }
 
-
+// Create Cursor
+if(global.GameCursor == noone){
+	instance_destroy(oCursor);
+	global.GameCursor = instance_create_depth(mouse_x, mouse_y, eInstanceDepth.close_3, oCursor);
+} if(!instance_exists(oCursor)){ global.GameCursor = noone; }

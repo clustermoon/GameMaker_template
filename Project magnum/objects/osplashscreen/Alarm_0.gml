@@ -1,5 +1,5 @@
 show_debug_message("Out of SplashScreen");
-room_goto_next();
+room_goto(rmMain);
 
 
 
