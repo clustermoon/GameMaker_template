@@ -1,4 +1,4 @@
-if (surface_exists(view_surf)) {
+/*if (surface_exists(view_surf)) {
 	draw_surface_part_ext(view_surf, 
 											frac(x), 
 											frac(y), 
@@ -11,3 +11,5 @@ if (surface_exists(view_surf)) {
 											c_white,
 											1);
 }
+*/
+

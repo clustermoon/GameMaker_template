@@ -1,4 +1,7 @@
 /// @description Initialize the project
+show_debug_message("**********************************");
+show_debug_message("Game Starting");
+show_debug_message("**********************************");
 
 #region | Globals
 
@@ -35,6 +38,7 @@
 	for(var i = 0; i < array_length(_managerArray); i++){
 		if(!instance_exists(_managerArray[i])){
 			instance_create_depth(0, 0, 0, _managerArray[i]);
+			if(i != 2){ show_debug_message("Initializing: " + string(object_get_name(_managerArray[i]))); }
 		}
 	}
 	

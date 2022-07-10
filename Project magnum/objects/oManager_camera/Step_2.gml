@@ -36,14 +36,16 @@
 
 		camera_set_view_angle(global.Camera, -global.CameraShake + random(global.CameraShake * 2));
 		camera_set_view_size(global.Camera, _newW, _newH);
-		camera_set_view_pos(global.Camera, floor(_newX), floor(_newY));
+		camera_set_view_pos(global.Camera, _newX, _newY);
 		//surface_resize(application_surface, global.CameraWidth, global.CameraHeight);
 	
+		/*
 		if (!surface_exists(view_surf)) {
 			view_surf = surface_create(global.CameraWidth + 1, global.CameraHeight + 1);
 		}
 
 		view_surface_id[0] = view_surf;
+		*/
 	
 #endregion
 //----------------------------------------------------------------------------------
