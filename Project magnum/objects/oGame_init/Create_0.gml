@@ -32,7 +32,7 @@ show_debug_message("**********************************");
 		oSplashScreen,
 		oManager_input,
 		oManager_sound,
-		oManager_Depth
+		oManager_depth
 	];
 
 	// Creates all objects in _managerArray

@@ -2,7 +2,7 @@
 #region | Temp Vars
 	var _bgSpr, _bgSpd, _bgXspd, _bgYspd, _bgX, _bgY;
 	_bgSpr = bgSplashScreen_tile;
-	_bgSpd = 0;
+	_bgSpd = 0.5;
 	_bgXspd = 0;
 	_bgYspd = -0.5;
 	_bgX = 0;

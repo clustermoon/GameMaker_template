@@ -28,7 +28,7 @@
     "path": "folders/Objects/Game Controllers/Managers.yy",
   },
   "resourceVersion": "1.0",
-  "name": "oManager_Depth",
+  "name": "oManager_depth",
   "tags": [],
   "resourceType": "GMObject",
 }
