@@ -47,5 +47,6 @@ button_InputBack	= noone;
 main_options = array_create(1, 0);
 
 
-virtualCursor_max	= 0;
-virtualCursor		= 0;
+virtualCursorVert_max	= 0;
+virtualCursorHorz_max	= 0;
+virtualCursor		= [0, 0];

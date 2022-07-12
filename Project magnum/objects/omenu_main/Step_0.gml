@@ -258,6 +258,37 @@ switch(page){
 	break;
 }
 	
-virtualCursor_max = instance_number(oButton);
+#region | Move Virtual Cursor
+	var _dkey = input_check_pressed(eInputState.padd);
+	var _ukey = input_check_pressed(eInputState.padu);
+	var _lkey = input_check_pressed(eInputState.padl);
+	var _rkey = input_check_pressed(eInputState.padr);
 
+	virtualCursorVert_max = instance_number(oButton);
+
+	//Down
+	if((virtualCursor[0] < virtualCursorVert_max) && _dkey){
+		virtualCursor[0] += 1;
+	}else if(virtualCursor[0] > virtualCursorVert_max){ virtualCursor[0] = 0; }
+
+	//Up
+	if((virtualCursor[0] > 0) && _ukey){
+		virtualCursor[0] -= 1;
+	}else if(virtualCursor[0] < 0){ virtualCursor[0] = virtualCursorVert_max; }
+
+	//Right
+	if((virtualCursor[1] < virtualCursorHorz_max) && _rkey){
+		virtualCursor[1] += 1;
+	}else if(virtualCursor[1] > virtualCursorHorz_max){ virtualCursor[1] = 0; }
+
+	//Left
+	if((virtualCursor[1] > 0) && _lkey){
+		virtualCursor[1] -= 1;
+	}else if(virtualCursor[1] < 0){ virtualCursor[1] = virtualCursorHorz_max; }
+
+
+
+	show_debug_message("Cursor[0]: " + string(virtualCursor[0]) + " / " + string(virtualCursorVert_max) + "Cursor[1]: " + string(virtualCursor[1]) + " / " + string(virtualCursorHorz_max));
+#endregion
+	
 	
