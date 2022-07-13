@@ -6,3 +6,4 @@ txt = "";
 clicked = false;
 hover = false;
 held = false;
+lookedAt = false;

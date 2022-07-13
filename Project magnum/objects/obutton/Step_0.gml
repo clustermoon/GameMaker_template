@@ -10,5 +10,10 @@ if(place_meeting(x, y, oCursor)){
 		held = true;	
 	}else{ held = false}
 	
-}else{ hover = false; } 
+}else{ hover = false; }
+
+
+if(lookedAt){
+	hover = true;	
+}
 

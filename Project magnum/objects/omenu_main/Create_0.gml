@@ -2,6 +2,10 @@
 // Inherit the parent event
 event_inherited();
 
+virtualCursorVert_max	= 0;
+virtualCursorHorz_max	= 0;
+virtualCursor		= [0, 0];
+
 page = 0;
 enum eMenuMain_pages {
 	main,
@@ -10,6 +14,28 @@ enum eMenuMain_pages {
 	sound,
 	input
 }
+
+ds_menu_main = [
+	["START", menuMain_start_game],
+	["SETTINGS", menuMain_goto_settings],
+	["EXIT", menuMain_exit_game]
+];
+menu_main_options = array_create(array_length(ds_menu_main), noone);
+
+ds_menu_settings = [
+	["GRAPHICS", menuMain_goto_graphics],
+	["SOUND", menuMain_goto_sound],
+	["INPUT", menuMain_goto_input],
+	["BACK", menuMain_back_to_main]
+];
+menu_settings_options = array_create(array_length(ds_menu_settings), noone);
+
+
+
+menu_pages = [ds_menu_main, ds_menu_settings];
+menu_options = [menu_main_options, menu_settings_options];
+
+
 /******************\
 | 0		|  Main	   |
 | 1		|  Settings|
@@ -17,36 +43,3 @@ enum eMenuMain_pages {
 | 3		|  Sound   |
 | 4		|  Input   |
 \******************/
-
-//Main Buttons
-button_MainStart	= noone;
-button_MainSettings = noone;
-button_MainExit		= noone;
-main_options = array_create(3, 0);
-
-//Settings Buttons
-button_SetGraphics	= noone;
-button_SetSound		= noone;
-button_SetInput		= noone;
-button_SetBack		= noone;
-settings_options = array_create(4, 0);
-
-
-//Graphics Buttons
-button_GraBack		= noone;
-main_options = array_create(1, 0);
-
-
-//Sound Buttons
-button_SoundBack	= noone;
-main_options = array_create(1, 0);
-
-
-//Input Buttons
-button_InputBack	= noone;
-main_options = array_create(1, 0);
-
-
-virtualCursorVert_max	= 0;
-virtualCursorHorz_max	= 0;
-virtualCursor		= [0, 0];
