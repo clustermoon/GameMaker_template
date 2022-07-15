@@ -54,7 +54,20 @@ menu_sound_options = array_create(array_length(ds_menu_sound), noone);
 
 // Input Menu
 ds_menu_input = [
-	["BACK",			menuInput_back]
+	["Left",				0],
+	["Right",				0],
+	["Down",				0],
+	["Up",					0],
+	["A-Button",			0],
+	["B-Button",			0],
+	["X-Button",			0],
+	["Y-Button",			0],
+	["Special 1",			0],
+	["Special 2",			0],
+	["Special 3",			0],
+	["Special 4",			0],
+	["Select",				0],
+	["BACK",				menuInput_back]
 ];
 menu_input_options = array_create(array_length(ds_menu_input), noone);
 
@@ -63,11 +76,3 @@ menu_input_options = array_create(array_length(ds_menu_input), noone);
 menu_pages = [ds_menu_main, ds_menu_settings, ds_menu_graphics, ds_menu_sound, ds_menu_input];
 menu_options = [menu_main_options, menu_settings_options, menu_graphics_options, menu_sound_options, menu_input_options];
 
-
-/******************\
-| 0		|  Main	   |
-| 1		|  Settings|
-| 2		|  Graphics|
-| 3		|  Sound   |
-| 4		|  Input   |
-\******************/

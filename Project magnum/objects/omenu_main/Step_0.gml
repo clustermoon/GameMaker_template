@@ -2,8 +2,8 @@
 
 // Variables
 var ds_grid = menu_pages[page], ds_height = array_length(ds_grid);	// The data and its max height
-var _x;// = menu_width/2;		// Positioning var ( menu_width/2 - string_width(_txt)/2 )
-var _y = menu_height/2;		// Positioning var
+var _x = menu_width/2;		// Positioning var ( menu_width/2 - string_width(_txt)/2 )
+var _y = menu_height/2 - menu_height/14;		// Positioning var
 
 //Create buttons
 for(var i = 0; i < ds_height; i++){
@@ -15,15 +15,10 @@ for(var i = 0; i < ds_height; i++){
 	
 	var _yspc = i * 32;
 	if(_moptions[i] == noone){
-		switch(page){
-			case eMenuMain_pages.graphics:
-				if(_moptions[i] != _moptions[4]){ _x = menu_width/2 - _x/6; }else{ _x = menu_width/2; }
-			break
-			default:
-				_x = menu_width/2; 
-			break
+		_x = menu_width/2 - string_width(_txt)/2;
+		if(page == eMenuMain_pages.input){
+			_y = menu_height/2 - menu_height/3;	
 		}
-	
 		_moptions[i] = instance_create_depth(_x, _y + _yspc, eInstanceDepth.close, oButton_text);
 		var _btn = _moptions[i];
 				
