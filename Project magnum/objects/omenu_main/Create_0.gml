@@ -18,35 +18,44 @@ enum eMenuMain_pages {
 
 // Main Menu
 ds_menu_main = [
-	["START",		menuMain_start_game],
-	["SETTINGS",	menuMain_goto_settings],
-	["EXIT",		menuMain_exit_game]
+	["START",			menuMain_start_game],
+	["SETTINGS",		menuMain_goto_settings],
+	["EXIT",			menuMain_exit_game]
 ];
 menu_main_options = array_create(array_length(ds_menu_main), noone);
 
 // Settings Menu
 ds_menu_settings = [
-	["GRAPHICS", 0],
-	["SOUND", 0],
-	["INPUT", 0],
-	["BACK", menuSettings_back]
+	["GRAPHICS",		menuSettings_goto_graphics],
+	["SOUND",			menusettings_goto_sound],
+	["INPUT",			0],
+	["BACK",			menuSettings_back]
 ];
 menu_settings_options = array_create(array_length(ds_menu_settings), noone);
 
-// Settings Menu
+// Graphics Menu
 ds_menu_graphics = [
-	["FULLSCREEN", 0],
-	["RESOLUTION", 0],
-	["V-SYNC", 0],
-	["ANTI-ALIASING", 0]
-	["BACK", menuGraphics_back]
+	["FULLSCREEN",		0],
+	["RESOLUTION",		0],
+	["V-SYNC",			0],
+	["ANTI-ALIASING",	0],
+	["BACK",			menuGraphics_back]
 ];
-menu_graphics_options = array_create(array_length(ds_menu_settings), noone);
+menu_graphics_options = array_create(array_length(ds_menu_graphics), noone);
+
+// Sound Menu
+ds_menu_sound = [
+	["MASTER",			0],
+	["MUSIC",			0],
+	["EFFECTS",			0],
+	["BACK",			menuSound_back]
+];
+menu_sound_options = array_create(array_length(ds_menu_sound), noone);
 
 
 
-menu_pages = [ds_menu_main, ds_menu_settings];
-menu_options = [menu_main_options, menu_settings_options];
+menu_pages = [ds_menu_main, ds_menu_settings, ds_menu_graphics, ds_menu_sound];
+menu_options = [menu_main_options, menu_settings_options, menu_graphics_options, menu_sound_options];
 
 
 /******************\

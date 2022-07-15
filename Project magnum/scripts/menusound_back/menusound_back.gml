@@ -1,8 +1,8 @@
-function menuGraphics_back(){
+function menuSound_back(){
 	page = eMenuMain_pages.settings;
-	for(var i = 0; i < array_length(menu_graphics_options); i++){
-		if(menu_graphics_options[i] != noone){
-			menu_graphics_options[i].active = false;
+	for(var i = 0; i < array_length(menu_sound_options); i++){
+		if(menu_sound_options[i] != noone){
+			menu_sound_options[i].active = false;
 		}
 	}
 	
