@@ -7,3 +7,4 @@ clicked = false;
 hover = false;
 held = false;
 lookedAt = false;
+active = true;

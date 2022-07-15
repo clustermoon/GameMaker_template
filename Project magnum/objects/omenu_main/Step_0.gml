@@ -1,7 +1,9 @@
 /// @description
-var ds_grid = menu_pages[page], ds_height = array_length(ds_grid);//ds_grid_height(ds_grid);
-var _x = menu_width/2;
-var _y = menu_height/2;
+
+// Variables
+var ds_grid = menu_pages[page], ds_height = array_length(ds_grid);	// The data and its max height
+var _x = menu_width/2;		// Positioning var
+var _y = menu_height/2;		// Positioning var
 
 //Create buttons
 for(var i = 0; i < ds_height; i++){
@@ -81,36 +83,17 @@ for(var i = 0; i < ds_height; i++){
 
 #endregion
 
-//When buttons get clicked
+//Clicking Buttons
 for(var j = 0; j < array_length(menu_options[page]); j++){
 	var _button = menu_options[page];
-	if(_button[j] != noone){
-		if(instance_exists(_button[j])){ 
+	if(_button[j] != noone && instance_exists(_button[j])){ 
 		if(_button[j].clicked == true){
-			var _info = ds_grid[j];
-			var _script = _info[0];
-		
+			if( j < ds_height){
+				var _info = ds_grid[j];
+			}
 			show_debug_message(string(_info[0]) + " button was clicked!");
 			script_execute(_info[1]);
-		}
+			
 		}
 	}
 }
-
-
-if(page != prevPage){
-	var _options = menu_options[prevPage];
-	var _len = array_length(_options)-1;
-	var t = _len;
-	repeat(t){
-		instance_destroy(_options[t]);
-		_options[t] = noone;
-		t--;	
-	}
-}
-
-
-if(prevPage != page){ prevPage = page; }
-
-
-

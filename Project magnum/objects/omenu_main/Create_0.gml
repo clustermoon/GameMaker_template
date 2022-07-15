@@ -7,7 +7,7 @@ virtualCursorHorz_max	= 0;
 virtualCursor		= [0, 0];
 
 page = 0;
-prevPage = 0;
+prevPage = page;
 enum eMenuMain_pages {
 	main,
 	settings,
@@ -16,6 +16,7 @@ enum eMenuMain_pages {
 	input
 }
 
+// Main Menu
 ds_menu_main = [
 	["START",		menuMain_start_game],
 	["SETTINGS",	menuMain_goto_settings],
@@ -23,6 +24,7 @@ ds_menu_main = [
 ];
 menu_main_options = array_create(array_length(ds_menu_main), noone);
 
+// Settings Menu
 ds_menu_settings = [
 	["GRAPHICS", 0],
 	["SOUND", 0],
@@ -30,6 +32,16 @@ ds_menu_settings = [
 	["BACK", menuSettings_back]
 ];
 menu_settings_options = array_create(array_length(ds_menu_settings), noone);
+
+// Settings Menu
+ds_menu_graphics = [
+	["FULLSCREEN", 0],
+	["RESOLUTION", 0],
+	["V-SYNC", 0],
+	["ANTI-ALIASING", 0]
+	["BACK", menuGraphics_back]
+];
+menu_graphics_options = array_create(array_length(ds_menu_settings), noone);
 
 
 

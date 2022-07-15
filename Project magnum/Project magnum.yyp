@@ -32,6 +32,7 @@
     {"id":{"name":"input_check_released","path":"scripts/input_check_released/input_check_released.yy",},"order":3,},
     {"id":{"name":"sCursor","path":"sprites/sCursor/sCursor.yy",},"order":0,},
     {"id":{"name":"oEntity","path":"objects/oEntity/oEntity.yy",},"order":0,},
+    {"id":{"name":"menuGraphics_back","path":"scripts/menuGraphics_back/menuGraphics_back.yy",},"order":4,},
     {"id":{"name":"oManager_camera","path":"objects/oManager_camera/oManager_camera.yy",},"order":3,},
     {"id":{"name":"oMenu","path":"objects/oMenu/oMenu.yy",},"order":1,},
     {"id":{"name":"bgSplashScreen_tile","path":"sprites/bgSplashScreen_tile/bgSplashScreen_tile.yy",},"order":1,},
