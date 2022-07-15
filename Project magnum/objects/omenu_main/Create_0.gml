@@ -27,8 +27,8 @@ menu_main_options = array_create(array_length(ds_menu_main), noone);
 // Settings Menu
 ds_menu_settings = [
 	["GRAPHICS",		menuSettings_goto_graphics],
-	["SOUND",			menusettings_goto_sound],
-	["INPUT",			0],
+	["SOUND",			menuSettings_goto_sound],
+	["INPUT",			menuSettings_goto_input],
 	["BACK",			menuSettings_back]
 ];
 menu_settings_options = array_create(array_length(ds_menu_settings), noone);
@@ -43,7 +43,7 @@ ds_menu_graphics = [
 ];
 menu_graphics_options = array_create(array_length(ds_menu_graphics), noone);
 
-// Sound Menu
+// sound Menu
 ds_menu_sound = [
 	["MASTER",			0],
 	["MUSIC",			0],
@@ -52,10 +52,16 @@ ds_menu_sound = [
 ];
 menu_sound_options = array_create(array_length(ds_menu_sound), noone);
 
+// Input Menu
+ds_menu_input = [
+	["BACK",			menuInput_back]
+];
+menu_input_options = array_create(array_length(ds_menu_input), noone);
 
 
-menu_pages = [ds_menu_main, ds_menu_settings, ds_menu_graphics, ds_menu_sound];
-menu_options = [menu_main_options, menu_settings_options, menu_graphics_options, menu_sound_options];
+
+menu_pages = [ds_menu_main, ds_menu_settings, ds_menu_graphics, ds_menu_sound, ds_menu_input];
+menu_options = [menu_main_options, menu_settings_options, menu_graphics_options, menu_sound_options, menu_input_options];
 
 
 /******************\

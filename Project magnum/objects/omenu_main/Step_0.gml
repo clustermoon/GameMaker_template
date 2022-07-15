@@ -2,7 +2,7 @@
 
 // Variables
 var ds_grid = menu_pages[page], ds_height = array_length(ds_grid);	// The data and its max height
-var _x = menu_width/2;		// Positioning var
+var _x;// = menu_width/2;		// Positioning var ( menu_width/2 - string_width(_txt)/2 )
 var _y = menu_height/2;		// Positioning var
 
 //Create buttons
@@ -15,21 +15,31 @@ for(var i = 0; i < ds_height; i++){
 	
 	var _yspc = i * 32;
 	if(_moptions[i] == noone){
+		switch(page){
+			case eMenuMain_pages.graphics:
+				if(_moptions[i] != _moptions[4]){ _x = menu_width/2 - _x/6; }else{ _x = menu_width/2; }
+			break
+			default:
+				_x = menu_width/2; 
+			break
+		}
+	
 		_moptions[i] = instance_create_depth(_x, _y + _yspc, eInstanceDepth.close, oButton_text);
 		var _btn = _moptions[i];
 				
 		_btn.txt = _txt;
 		_btn.image_xscale = string_width(_txt)/2;
 		_btn.image_yscale = string_height(_txt)/2;
+		
 	}else{ break; }
 }
 
 
 #region | Virtual Cursor
-	var _dkey = input_check_pressed(eInputState.padd);
-	var _ukey = input_check_pressed(eInputState.padu);
-	var _lkey = input_check_pressed(eInputState.padl);
-	var _rkey = input_check_pressed(eInputState.padr);
+	var _dkey = input_check_pressed(eInputState.padd) || keyboard_check(vk_down);
+	var _ukey = input_check_pressed(eInputState.padu) || keyboard_check(vk_up);
+	var _lkey = input_check_pressed(eInputState.padl) || keyboard_check(vk_left);
+	var _rkey = input_check_pressed(eInputState.padr) || keyboard_check(vk_right);
 
 	virtualCursorVert_max = ds_height;
 
@@ -57,8 +67,11 @@ for(var i = 0; i < ds_height; i++){
 	
 	//moving cursor and using it
 	var _cursorOnButtons = false;
-	var _enter = (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) || input_check_pressed(eInputState.aButton);
-
+	var _enter;
+	if(prevPage == page){
+		_enter = (keyboard_check_pressed(vk_enter) || keyboard_check_pressed(vk_space)) || input_check_pressed(eInputState.aButton);
+	}
+	
 	with(oCursor){
 		if(place_meeting(x,y, oButton)){
 			_cursorOnButtons = true;	
@@ -93,7 +106,10 @@ for(var j = 0; j < array_length(menu_options[page]); j++){
 			}
 			show_debug_message(string(_info[0]) + " button was clicked!");
 			script_execute(_info[1]);
-			
+			_button[j].clicked = false;
 		}
 	}
 }
+
+
+if(prevPage != page){ prevPage = page }

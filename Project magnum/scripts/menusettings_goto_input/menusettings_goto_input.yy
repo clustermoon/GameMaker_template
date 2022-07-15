@@ -6,7 +6,7 @@
     "path": "folders/Scripts/Menu/Actions.yy",
   },
   "resourceVersion": "1.0",
-  "name": "menuSettings_goto_sound",
+  "name": "menuSettings_goto_input",
   "tags": [],
   "resourceType": "GMScript",
 }
