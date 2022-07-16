@@ -1,5 +1,6 @@
 /// @description Insert description here
 // You can write your code in this editor
+draw_set_font(fntDebug);
 
 if(active){
 	var _sclBase = scl;
@@ -19,6 +20,6 @@ if(active){
 		}
 	}else{ color = c_white; _scl = lerp(_scl, _sclBase, 0.025); }
 
-	draw_text_transformed_color((x-_moveAmmnt/2) - string_width(txt)/2, (y - _moveAmmnt/2) - string_height(txt)/2, txt, _scl, _scl, 0, color, color, color, color, alph);
+	draw_text_transformed_color((x-_moveAmmnt/2) - (string_width(txt)*scl)/2, (y - _moveAmmnt/2) - string_height(txt)*scl/2, txt, _scl, _scl, 0, color, color, color, color, alph);
 
 }

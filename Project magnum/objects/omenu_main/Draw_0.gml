@@ -4,6 +4,8 @@ var ds_grid = menu_pages[page], ds_height = array_length(ds_grid);	// The data a
 var _x = menu_width/2;							// Positioning var 
 var _y = menu_height/2 - menu_height/14;		// Positioning var
 var _fs = 72 * 0.25;
+//draw_set_font(fntDebug);
+var _s = 0.25;
 
 if(page == eMenuMain_pages.input){
 	_y = menu_height/2 - menu_height/3;	
@@ -12,5 +14,41 @@ if(page == eMenuMain_pages.input){
 
 draw_line(_x + 24, _y-14, _x + 24, _y+28*ds_height);
 
+
+#region | right side
+	_x = menu_width/2 + 64;
+
+	switch(page){
+		case eMenuMain_pages.input:
+			for(var i = 0; i < ds_height-1; i++){
+				var _yspc = i * 32;
+				_y = menu_height/2 - menu_height/3 - 16;	
+				var _c = c_white;
+				if(i == virtualCursor[0]){
+					if(inputting){ _c = c_orange; }else{ _c = c_white; }
+				}
+				if(global.CurrentInputDevice == eInputDevice.keyboard){
+					draw_text_transformed_color(_x, _y+_yspc, key_to_string(global.InputList_keyboard[i]), _s,_s, 0, _c, _c,_c,_c,1);
+				}else{
+					draw_text_transformed_color(_x, _y+_yspc, key_to_string(global.InputList_controller[i]), _s,_s, 0, _c, _c,_c,_c,1);
+				}
+			}
+			
+		break;
+		case eMenuMain_pages.sound:
+			for(var i = 0; i < ds_height-1; i++){
+				var _yspc = i * 32;
+				_y = menu_height/2 - 40;	
+				_x = menu_width/2 + 100;
+				var _c = c_white;
+			
+				if(scroll_bars[i] == noone){
+					scroll_bars[i] = instance_create_depth(_x, _y+_yspc, depth, oScrollBar);	
+				}
+			}
+		break;
+	}
+
+#endregion
 
 

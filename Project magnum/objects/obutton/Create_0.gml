@@ -1,7 +1,7 @@
 /// @description 
 alph = 1;
 color = c_white;
-scl = 1;
+scl = 0.25;
 txt = "";
 clicked = false;
 hover = false;

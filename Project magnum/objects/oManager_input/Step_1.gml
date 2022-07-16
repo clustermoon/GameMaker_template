@@ -70,6 +70,7 @@ if(!global.Freeze){
 			global.Input[eInputState.padr]				= global.InputList_controller[eInputList.d];
 			global.Input[eInputState.padu]				= global.InputList_controller[eInputList.w];
 			global.Input[eInputState.padd]				= global.InputList_controller[eInputList.s];
+					
 			
 		break;
 	}
@@ -86,3 +87,5 @@ if(global.GameCursor == noone){
 	instance_destroy(oCursor);
 	global.GameCursor = instance_create_depth(mouse_x, mouse_y, eInstanceDepth.close_3, oCursor);
 } if(!instance_exists(oCursor)){ global.GameCursor = noone; }
+
+

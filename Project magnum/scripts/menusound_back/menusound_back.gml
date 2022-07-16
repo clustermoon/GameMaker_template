@@ -11,6 +11,12 @@ function menuSound_back(){
 			menu_settings_options[l].active = true;
 		}
 	}
+	
+	scroll_bars[0].active = false;
+	scroll_bars[1].active = false;
+	scroll_bars[2].active = false;
+	
+	
 	virtualCursor[0] = 0;
 	virtualCursor[1] = 0;
 }

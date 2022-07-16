@@ -50,3 +50,5 @@ global.InputList_controller = [
 	gp_shoulderl,
 	gp_select
 ];
+
+
