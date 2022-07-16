@@ -140,10 +140,30 @@ draw_set_font(fntDebug);
 if(inputting && (page == eMenuMain_pages.graphics || page == eMenuMain_pages.sound)){
 	switch(page){
 		case eMenuMain_pages.graphics:
+			if(virtualCursor[0] == 0){// fullscreen
+				var _h = input_check_pressed(eInputState.padr) - input_check_pressed(eInputState.padl);
+				if(_h != 0){
+					virtualCursor[1] += _h;
+					if(virtualCursor[1] < 0){ virtualCursor[1] = 0; }
+					if(virtualCursor[1] > array_length(oManager_system.fullscreen[1])){virtualCursor[1] = array_length(oManager_system.fullscreen[1])}
+					var _ch = oManager_system.fullscreen[1];
+					oManager_system.fullscreen[0] = _ch[virtualCursor[1]];
+				}
+			}
+			if(virtualCursor[0] == 1){// resolution
+				var _h = input_check_pressed(eInputState.padr) - input_check_pressed(eInputState.padl);
+				if(_h != 0){
+					virtualCursor[1] += _h;
+					if(virtualCursor[1] < 0){ virtualCursor[1] = 0; }
+					if(virtualCursor[1] > array_length(oManager_system.resolution[1])-1){virtualCursor[1] = array_length(oManager_system.resolution[1])-1;}
+					var _ch = oManager_system.resolution[1];
+					oManager_system.resolution[0] = _ch[virtualCursor[1]];
+				}	
+			}
 			
 		break;
 		case eMenuMain_pages.sound:
-			if(virtualCursor[0] == 0){
+			if(virtualCursor[0] == 0){ // master volume
 				if(oManager_sound.gain_master >= 0 && oManager_sound.gain_master <= 1){
 					oManager_sound.gain_master += 0.01*input_check_axis(eInputState.lStick_hAxis);
 					if(scroll_bars[0] != noone){
@@ -157,7 +177,7 @@ if(inputting && (page == eMenuMain_pages.graphics || page == eMenuMain_pages.sou
 				}else if(oManager_sound.gain_master < 0){ oManager_sound.gain_master = 0; } else if(oManager_sound.gain_master > 1){ oManager_sound.gain_master = 1; }
 				
 			}	
-			if(virtualCursor[0] == 1){
+			if(virtualCursor[0] == 1){ // music volume
 				if(oManager_sound.gain_music >= 0 && oManager_sound.gain_music <= 1){
 					oManager_sound.gain_music += 0.01*input_check_axis(eInputState.lStick_hAxis);
 					if(scroll_bars[1] != noone){
@@ -170,7 +190,7 @@ if(inputting && (page == eMenuMain_pages.graphics || page == eMenuMain_pages.sou
 					}
 				}else if(oManager_sound.gain_music < 0){ oManager_sound.gain_music = 0; } else if(oManager_sound.gain_music > 1){ oManager_sound.gain_music = 1; }
 			}	
-			if(virtualCursor[0] == 2){
+			if(virtualCursor[0] == 2){ // sound effects
 				if(oManager_sound.gain_effects >= 0 && oManager_sound.gain_effects <= 1){
 					oManager_sound.gain_effects += 0.01*input_check_axis(eInputState.lStick_hAxis);
 					if(scroll_bars[2] != noone){

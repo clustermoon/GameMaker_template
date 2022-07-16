@@ -94,3 +94,11 @@
 		
 #endregion
 
+
+aa_levels = [0, [0, 2, 4, 8]];
+vsync = [false, [true, false]];
+resolution = [[960, 540], [[480, 270], [720, 480], [960, 540], [1280, 720], [1920, 1080]]];
+fullscreen = [false, [true, false]];
+back = ["", ""];
+graphics_settings = [fullscreen, resolution, back ];
+
