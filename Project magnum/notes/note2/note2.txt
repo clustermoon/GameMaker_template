@@ -3,4 +3,5 @@ things to include in save file
 all global arrays and variables.
 
 oManager_sound gain variables.
+oManager_system graphic settings.
 

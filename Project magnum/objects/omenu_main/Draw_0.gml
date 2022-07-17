@@ -50,8 +50,8 @@ draw_line(_x + 24, _y-14, _x + 24, _y+28*ds_height);
 		case eMenuMain_pages.graphics:
 			for (var i = 0; i < ds_height; ++i) {
 			   var _yspc = i * 32;
-				_y = menu_height/2 - 46;	
-				_x = menu_width/2 + 100;
+				_y = menu_height/2 - 50;	
+				_x = menu_width/2 + 48;
 				var _c = c_white;
 				if(i == virtualCursor[0]){
 					if(inputting){ _c = c_orange; }else{ _c = c_white; }
@@ -59,7 +59,7 @@ draw_line(_x + 24, _y-14, _x + 24, _y+28*ds_height);
 				var _graphic_set = oManager_system.graphics_settings[i];
 				if(oManager_system.graphics_settings[i] == 1){
 					var _gs = oManager_system.graphics_settings[i];
-					_graphic_set = _gs[0];	
+					_graphic_set[0] = _gs[0];	
 				}
 				draw_text_transformed_color(_x, _y+_yspc, string(_graphic_set[0]), _s, _s, 0, _c, _c, _c, _c, 1);
 				
