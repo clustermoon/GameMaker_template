@@ -1,16 +1,16 @@
 function menuSettings_back(){
-	page = eMenuMain_pages.main;
-	for(var i = 0; i < array_length(menu_settings_options); i++){
-		if(menu_settings_options[i] != noone){
-			menu_settings_options[i].active = false;
+	
+	for(var i = 0; i < array_length(oMenu_Main.menu_pages[oMenu_Main.page]); i++){
+		if(oMenu_Main.menu_pages[oMenu_Main.page][i, 3] != noone){
+			instance_destroy(oMenu_Main.menu_pages[oMenu_Main.page][i, 3]); 	
+			oMenu_Main.menu_pages[oMenu_Main.page][i, 3] = noone;
 		}
 	}
 	
-	for(var l = 0; l < array_length(menu_main_options); l++){
-		if(menu_main_options[l] != noone){
-			menu_main_options[l].active = true;
-		}
+	if(global.MultiplayerGame){
+		oMenu_Main.page = 6;
+	}else{
+		oMenu_Main.page = 0;
 	}
-	virtualCursor[0] = 0;
-	virtualCursor[1] = 0;
+	
 }

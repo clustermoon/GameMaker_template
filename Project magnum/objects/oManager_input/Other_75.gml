@@ -8,9 +8,26 @@ if(!global.Freeze){
 		gamepad_set_axis_deadzone(pad, 0.5);													// Set the "deadzone" for the axis
 		gamepad_set_button_threshold(pad, 0.1);											// Set the "threshold" for the triggers
 		global.GamePad = pad;
+		array_push(connectedControllers, pad); 
 		break;
 	case "gamepad lost":																					// Gamepad has been removed or otherwise disabled
+		for(var i = 0; i < array_length(connectedControllers); i++){
+			if(global.GamePad == connectedControllers[i]){
+				for(var k = 0; k < instance_number(oPlayer)-1; k++){
+					var _p = instance_find(oPlayer, k);
+					if(_p.game_pad == connectedControllers[i]){
+						instance_destroy(_p);	
+					}
+				}
+				array_delete(connectedControllers, i, 1);	
+			}
+		}
+		
+
+		
 		global.GamePad = noone;
+		
 		break;
 	}
 }
+

@@ -110,6 +110,32 @@ function key_to_string(argument0){
 		case	173:	return "Mute"
 		case	174:	return "Volume Down"
 		case	175:	return "Volume Up"
+		
+		
+	
+		// Constant         // Buttons Description      // Constant Number      // Type
+		case gp_face1:      return "A";          // [32769]              // Button
+		case gp_face2:      return "B";          // [32770]              // Button
+		case gp_face3:      return "X";          // [32771]              // Button
+		case gp_face4:      return "Y";          // [32772]              // Button
+		case gp_shoulderl:  return "Left Trigger";      // [32773]              // Button
+		case gp_shoulderr:  return "Right Trigger";      // [32774]              // Button
+		case gp_shoulderlb: return "Left Shoulder";     // [32775]              // Button
+		case gp_shoulderrb: return "right Shoulder";     // [32776]              // Button
+		case gp_select:     return "Select";         // [32777]              // Button
+		case gp_start:      return "Start";          // [32778]              // Button
+		case gp_stickl:     return "Left Stick";         // [32779]              // Button
+		case gp_stickr:     return "Right Stick";         // [32780]              // Button
+		case gp_padu:       return "Pad Up";           // [32781]              // Button
+		case gp_padd:       return "Pad Down";           // [32782]              // Button
+		case gp_padl:       return "Pad Left";           // [32783]              // Button
+		case gp_padr:       return "Pad Right";           // [32784]              // Button
+		case gp_axislh:     return "gp_axislh";         // [32785]              // Analog
+		case gp_axislv:     return "gp_axislv";         // [32786]              // Analog
+		case gp_axisrh:     return "gp_axisrh";         // [32787]              // Analog
+		case gp_axisrv:     return "gp_axisrv";         // [32788]              // Analog
+		
+		case 80000:			return "Not Assigned";
 
 		default:		return "key doesn't exist in this map"
 	}

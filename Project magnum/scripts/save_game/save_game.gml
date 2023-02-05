@@ -6,8 +6,7 @@ function save_game(_save_name){
 	var _saveData = array_create(0);
 
 	with(oEntity){
-		var _saveEntity;
-			_saveEntity = {
+		var _saveEntity = {
 			obj : object_get_name(object_index),
 			id : id,
 			instance_id : instance_id,

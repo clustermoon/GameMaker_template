@@ -28,11 +28,13 @@ show_debug_message("**********************************");
 	// The Manager Array. Add Objects here to init an object at runtime.
 	var _managerArray = [
 		oManager_system,
+		oManager_network,
 		oManager_camera,
 		oSplashScreen,
 		oManager_input,
 		oManager_sound,
-		oManager_depth
+		oManager_depth,
+		oManager_HUD
 	];
 
 	// Creates all objects in _managerArray

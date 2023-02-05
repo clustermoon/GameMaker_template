@@ -1,8 +1,8 @@
 /// @description Update Camera
 #region | Update camera
 		var _p = View_Target;
-		var _InputH = input_check_axis(eInputState.lStick_hAxis);
-		var _InputV = input_check_axis(eInputState.lStick_vAxis);
+		var _InputH = input_check_axis(global.GamePad ,eInputState.lStick_hAxis);
+		var _InputV = input_check_axis(global.GamePad ,eInputState.lStick_vAxis);
 		
 		var _viewX = camera_get_view_x(global.Camera);
 		var _viewY = camera_get_view_y(global.Camera);

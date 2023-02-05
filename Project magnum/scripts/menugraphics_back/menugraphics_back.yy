@@ -1,12 +1,11 @@
 {
-  "isDnD": false,
-  "isCompatibility": false,
-  "parent": {
-    "name": "Actions",
-    "path": "folders/Scripts/Menu/Actions.yy",
-  },
+  "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "menuGraphics_back",
-  "tags": [],
-  "resourceType": "GMScript",
+  "isCompatibility": false,
+  "isDnD": false,
+  "parent": {
+    "name": "Graphics Menu",
+    "path": "folders/Scripts/Menu/Settings Menu/Graphics Menu.yy",
+  },
 }

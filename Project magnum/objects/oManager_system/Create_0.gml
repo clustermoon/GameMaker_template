@@ -1,8 +1,7 @@
-/// @description 
 	
 #region | Delta 
 	global.TargetDelta					= 1/60;  
-	global.DeltaReal						= delta_time/1000000;
+	global.DeltaReal					= delta_time/1000000;
 	global.DeltaMultiplyer				= global.DeltaReal / global.TargetDelta;
 #endregion 
 
@@ -40,7 +39,9 @@
 	global.Pause = false;		// Boolean used to pause the game while running.
 	global.Freeze = false;		// Will Stop Managers and code from being run. DEBUG USE ONLY.
 	
-	global.MultiplayerGame = false;
+	global.MultiplayerGame = true;
+	global.ActiveControllers = [];
+	global.InMenu = false;
 		
 #endregion
 
@@ -52,7 +53,7 @@
 	global.NetworkSocket = noone;
 	global.NetworkPort = 59975;
 	global.NetworkIp =  "127.0.0.1";
-		
+	/*	
 	global.NetworkIsHost = false;
 	global.NetworkIsConnected = false;
 		
@@ -61,14 +62,16 @@
 		
 	global.NetworkHostNumber = noone;
 	global.NetworkPlayerNumber = noone;
-		
+	*/
 	enum eNetworkMsgType {
 		create_host, 
 		join_host, 
 		stop_host,
 		set_player_state,
 		get_host,
-		leave_host
+		leave_host,
+		get_player_state,
+		get_new_players
 	}
 		
 #endregion
@@ -91,14 +94,14 @@
 #region | Drawing and scaling
 	
 	global.GUIScale = 1;
-		
+	
+	alarm[0] = 1;
+
+	aa_levels = [0, [0, 2, 4, 8]];
+	vsync = [false, [true, false]];
+	resolution = [[960, 540], [[480, 270], [720, 480], [960, 540], [1280, 720], [1920, 1080]]];
+	fullscreen = [false, [true, false]];
+	back = ["", ""];
+	graphics_settings = [fullscreen, resolution, back ];
+
 #endregion
-
-
-aa_levels = [0, [0, 2, 4, 8]];
-vsync = [false, [true, false]];
-resolution = [[960, 540], [[480, 270], [720, 480], [960, 540], [1280, 720], [1920, 1080]]];
-fullscreen = [false, [true, false]];
-back = ["", ""];
-graphics_settings = [fullscreen, resolution, back ];
-

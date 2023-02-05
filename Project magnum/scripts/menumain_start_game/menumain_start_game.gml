@@ -1,4 +1,6 @@
-function menuMain_start_game(){
-	var _Level0 = rmTestGrounds;
-	room_goto(_Level0);
+function menuMain_start_game(){	
+		var _Level0 = rmTestGrounds;
+		global.CameraActive = true;
+		room_goto(_Level0);
 }
+
