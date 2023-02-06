@@ -14,7 +14,6 @@ if(!preventCursor){
 }
 	
 // add hosts to the list
-/*
 if(page == 7){
 	var ds_height = oManager_network.number_of_hosts;
 		
@@ -29,7 +28,7 @@ if(page == 7){
 }else{
 	menu_pages[7] = [];	
 }
-*/
+
 	
 //create buttons
 for(var i = 0; i < array_length(menu_pages[page]); i++){
