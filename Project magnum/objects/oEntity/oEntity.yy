@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Parents",
-    "path": "folders/Objects/Parents.yy",
+    "path": "folders/Objects/Game Controllers/Parents.yy",
   },
   "parentObjectId": null,
   "persistent": true,

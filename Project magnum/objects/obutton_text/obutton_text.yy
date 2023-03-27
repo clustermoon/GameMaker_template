@@ -9,7 +9,7 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Misc",
-    "path": "folders/Objects/Misc.yy",
+    "path": "folders/Objects/Prefabs/Misc.yy",
   },
   "parentObjectId": {
     "name": "oButton",

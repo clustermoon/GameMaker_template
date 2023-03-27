@@ -34,7 +34,8 @@ show_debug_message("**********************************");
 		oManager_input,
 		oManager_sound,
 		oManager_depth,
-		oManager_HUD
+		oManager_HUD,
+		oManager_game
 	];
 
 	// Creates all objects in _managerArray

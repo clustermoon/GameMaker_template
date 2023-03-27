@@ -1,3 +1,3 @@
 In 'oGame_init' : Step : Line 9   -   Add a sound effect
-
+when the host exits the game in the lobby it crashes the game for the people in the lobby
 

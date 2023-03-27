@@ -5,13 +5,13 @@ if(async_load[? "size"] > 0){
 	var msdID = buffer_read(buff, buffer_string);
 	var response = json_decode(msdID);
 	
-	// ------------------------------------------------------------------- DEBUG 
+	// -------------------------------------------------------------------- | DEBUG 
 	if(ds_map_find_value(response, "type") == eNetworkMsgType.debug){
 		var msg = ds_map_find_value(response, "message");
 		show_debug_message("> " + string(msg));
 	}
 	
-	//--------------------------------------------------------------------- CREATE HOST
+	//--------------------------------------------------------------------- | CREATE HOST
 	if(ds_map_find_value(response, "type") == eNetworkMsgType.create_host){
 		var hostnumber = ds_map_find_value(response, "hostnumber");
 		var playernumber = ds_map_find_value(response, "playernumber");
@@ -21,11 +21,9 @@ if(async_load[? "size"] > 0){
 		
 		show_debug_message("Created host #" + string(hostnumber) + " with " + string(playernumber) + " players");
 		room_goto(rmLobby);
-		//var _xx = 200, _yy = 300;
-		//instance_create_depth(_xx, _yy, eInstanceDepth.mid, oPlayer);
 	}
 	
-	//--------------------------------------------------------------------- Stop HOST
+	//--------------------------------------------------------------------- | STOP HOST
 	if(ds_map_find_value(response, "type") == eNetworkMsgType.stop_host){
 		var res = ds_map_find_value(response, "res");
 		if(res == "stopped"){
@@ -34,4 +32,33 @@ if(async_load[? "size"] > 0){
 			room_goto(rmMain); 
 		}
 	}
+
+	//--------------------------------------------------------------------- | GET HOST
+	if(ds_map_find_value(response, "type") == eNetworkMsgType.get_host){
+		var hosts = ds_map_find_value(response, "hosts");
+		number_of_hosts = ds_list_size(hosts);
+		for (var i = 0; i < number_of_hosts; i++) {
+		    var availableHost  = ds_list_find_value(hosts, i);
+			number_of_players = ds_list_size(availableHost);
+			recievedHosts = true;
+		}
+	}
+	
+	//--------------------------------------------------------------------- | JOIN HOST
+	if(ds_map_find_value(response, "type") == eNetworkMsgType.join_host){
+		global.NetworkPlayerNumber = ds_map_find_value(response, "playerNumber");
+		global.NetworkIsConnected = true;
+		global.NetworkHostNumber = network_cursor;
+		joinSucceed = true ;
+		room_goto(rmLobby);
+	}
+	
+	//--------------------------------------------------------------------- | LEAVE HOST
+	if(ds_map_find_value(response, "type") == eNetworkMsgType.leave_host){
+		show_debug_message("recived");
+		leaveSucceed = true;
+		global.NetworkIsConnected = false;
+		room_goto(rmMain);
+	}
+
 }
